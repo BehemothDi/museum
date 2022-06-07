@@ -105,7 +105,7 @@ class SiteController extends Controller
      */
     public function actionRecord()
     {
-        return $this->render('gallery');
+        return $this->render('record');
     }
 
     /**

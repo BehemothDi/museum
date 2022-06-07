@@ -4,6 +4,8 @@ namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
+use yii\db\ActiveRecord;
+;
 
 /**
  * This is the model class for table "news".
@@ -15,7 +17,7 @@ use yii\base\Model;
  * @property string $datetime
  * @property string $author
  */
-class News extends \yii\db\ActiveRecord
+class News extends ActiveRecord
 {
     /**
      * {@inheritdoc}
