@@ -19,26 +19,30 @@ $this->params['breadcrumbs'][] = $this->title;
 
     $news_list = News::find()->asArray()->all();
 
-     ?>
+    ?>
 
     <div class="album py-5 bg-light">
         <div class="container">
 
-            <?php foreach ($news_list as $news):?>
-            <div class="col-lg-12 col-md-6">
-        <div class="card flex-md-row mb-4 box-shadow h-md-250">
-            <img class="card-img-right flex-auto d-none d-md-block img-thumbnail img-responsive" src="<?php echo $news['image_link'];?>" alt="Card image cap" height="150" width="400"/>
-            <div class="card-body d-flex flex-column align-items-start"><strong class="d-inline-block mb-2 text-secondary"><?php echo $news['author'];?></strong>
-                <h3 class="mb-0"> <a class="text-dark" href="#"><?php echo $news['title'];?></a> </h3>
-                <div class="mb-1 text-muted"><?php echo $news['datetime'];?></div>
-                <p class="card-text mb-auto"><?php echo $news['short_desc'];?></p><a href="<?=Url::toRoute(['site/news_detailed', 'id' => $news['id']]);?>">Посмотреть подробнее</a>
-            </div>
-        </div>
-    </div>
-            <?php endforeach;?>
+            <?php foreach ($news_list as $news): ?>
+                <div class="col-lg-12 col-md-6">
+                    <div class="card flex-md-row mb-4 box-shadow h-md-250">
+                        <img class="card-img-right flex-auto d-none d-md-block img-thumbnail img-responsive"
+                             src="<?php echo $news['image_link']; ?>" alt="Card image cap" height="150" width="400"/>
+                        <div class="card-body d-flex flex-column align-items-start"><strong
+                                    class="d-inline-block mb-2 text-secondary"><?php echo $news['author']; ?></strong>
+                            <h3 class="mb-0"><a class="text-dark" href="#"><?php echo $news['title']; ?></a></h3>
+                            <div class="mb-1 text-muted"><?php echo $news['datetime']; ?></div>
+                            <p class="card-text mb-auto"><?php echo $news['short_desc']; ?></p><a
+                                    href="<?= Url::toRoute(['site/news_detailed', 'id' => $news['id']]); ?>">Посмотреть
+                                подробнее</a>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach; ?>
 
 
-    <div class="container text-left">
+            <div class="container text-left">
                 <ul class="d-flex flex-row justify-content-center pagination text-left">
                     <li class="page-item">
                         <a class="page-link" href="#">Previous</a>
@@ -62,7 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </ul>
             </div>
 
-    </div>
+        </div>
     </div>
 
 
