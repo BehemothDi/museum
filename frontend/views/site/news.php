@@ -4,6 +4,8 @@
 
 use frontend\models\News;
 use yii\helpers\Html;
+use yii\helpers\Url;
+
 use frontend\controllers\NewsController;
 
 
@@ -17,31 +19,19 @@ $this->params['breadcrumbs'][] = $this->title;
 
     $news_list = News::find()->asArray()->all();
 
-
-//    for ($i = 1; $i <= 5; $i++) {
-//        print_r($news_list);
-//    }
-//
-//
-//
-//
-//
-//    ?>
+     ?>
 
     <div class="album py-5 bg-light">
         <div class="container">
 
             <?php foreach ($news_list as $news):?>
-
-
-
             <div class="col-lg-12 col-md-6">
         <div class="card flex-md-row mb-4 box-shadow h-md-250">
-            <img class="card-img-right flex-auto d-none d-md-block" src="<?php echo $news['image_link'];?>" alt="Card image cap" width="300" height="300"/>
+            <img class="card-img-right flex-auto d-none d-md-block img-thumbnail img-responsive" src="<?php echo $news['image_link'];?>" alt="Card image cap" height="150" width="400"/>
             <div class="card-body d-flex flex-column align-items-start"><strong class="d-inline-block mb-2 text-secondary"><?php echo $news['author'];?></strong>
                 <h3 class="mb-0"> <a class="text-dark" href="#"><?php echo $news['title'];?></a> </h3>
                 <div class="mb-1 text-muted"><?php echo $news['datetime'];?></div>
-                <p class="card-text mb-auto"><?php echo $news['short_desc'];?></p><a href="#">Посмотреть подробнее</a>
+                <p class="card-text mb-auto"><?php echo $news['short_desc'];?></p><a href="<?=Url::toRoute(['site/news_detailed', 'id' => $news['id']]);?>">Посмотреть подробнее</a>
             </div>
         </div>
     </div>
