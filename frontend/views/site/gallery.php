@@ -10,10 +10,10 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-about">
     <h1><?= Html::encode($this->title) ?></h1>
 
-    <section class=" text-center">
+    <section class="text-center">
         <iframe src="https://www.mospano.ru/museums/2020/murmansk/" width="100%"  height="600" style="border:0; border-radius: 7px; overflow: hidden" allowfullscreen></iframe>
-        <div class="bg-dark container-fluid text-white">
-            <a href="https://www.mospano.ru/museums/2020/murmansk/" target="_blank">Открыть виртуальный тур в новом окне</a>
+        <div class="bg-dark container-fluid text-white p-2">
+            <a href="https://www.mospano.ru/museums/2020/murmansk/" target="_blank" style="color: white; text-decoration: none;">Открыть виртуальный тур в новом окне</a>
         </div>
     </section>
 

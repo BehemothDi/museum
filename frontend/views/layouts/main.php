@@ -48,7 +48,8 @@ AppAsset::register($this);
         if (Yii::$app->user->isGuest) {
             $menuItems[] = ['label' => 'Регистрация', 'url' => ['/site/signup']];
             $menuItems[] = ['label' => 'Войти', 'url' => ['/site/login']];
-            $menuItems[] = ['label' => Html::tag('span', '', ['class' => 'fab fa-vk']) . '', 'url' => 'https://vk.com/club4424197'];
+            $menuItems[] = ['label' => Html::tag('span', '', ['class' => 'fab fa-vk']) . '', 'url' => 'https://vk.com/public191153873', 'linkOptions' => array('target' => '_blank'),];
+            $menuItems[] = ['label' => Html::tag('span', '', ['class' => 'fab fa-youtube']). '', 'url' => 'https://www.youtube.com/watch?v=nyJC3_GWo7E', 'linkOptions' => array('target' => '_blank'),];
         } else {
             $menuItems[] = '<li>'
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])
@@ -72,6 +73,7 @@ AppAsset::register($this);
     <main role="main" class="flex-shrink-0">
         <div class="container">
             <?= Breadcrumbs::widget([
+                'homeLink'=> ['url'=>'/site/index','label'=>'Главная'],
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
             <?= Alert::widget() ?>
