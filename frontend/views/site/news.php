@@ -3,11 +3,13 @@
 /** @var yii\web\View $this */
 
 use frontend\models\News;
+use yii\data\Pagination;
 use yii\helpers\Html;
 use yii\helpers\Url;
-
+use frontend\controllers\SiteController;
 use frontend\controllers\NewsController;
-
+use yii\widgets\LinkPager;
+use yii\data\ActiveDataProvider;
 
 $this->title = 'Новости';
 $this->params['breadcrumbs'][] = $this->title;
@@ -17,14 +19,26 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <?php
 
+
+
     $news_list = News::find()->asArray()->all();
+
+    $provider = new ActiveDataProvider([
+        'query' => News::find(),
+        'pagination' => [
+            'pageSize' => 7,
+
+        ],
+
+
+    ]);
 
     ?>
 
     <div class="album py-5 bg-light">
         <div class="container">
 
-            <?php foreach ($news_list as $news): ?>
+            <?php foreach ($provider->getModels() as $news): ?>
                 <div class="col-lg-12 col-md-6">
                     <div class="card flex-md-row mb-4 box-shadow h-md-250">
                         <img class="card-img-right flex-auto d-none d-md-block img-thumbnail img-responsive"
@@ -42,28 +56,26 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php endforeach; ?>
 
 
+
+
+
             <div class="container text-left">
-                <ul class="d-flex flex-row justify-content-center pagination text-left">
-                    <li class="page-item">
-                        <a class="page-link" href="#">Previous</a>
-                    </li>
-
-                    <li class="page-item">
-                        <a class="page-link" href="#">1</a>
-                    </li>
-
-                    <li class="page-item">
-                        <a class="page-link" href="#">2</a>
-                    </li>
-
-                    <li class="page-item">
-                        <a class="page-link" href="#">3</a>
-                    </li>
-
-                    <li class="page-item">
-                        <a class="page-link" href="#">Next</a>
-                    </li>
-                </ul>
+                    <?php
+                    echo LinkPager::widget([
+                        'pagination' => $provider->pagination,
+                        'options' => ['class' => 'd-flex flex-row justify-content-center pagination text-left'],
+                        'maxButtonCount' => 8,
+                        'linkOptions' => ['class' => 'page-link'],
+                        'firstPageLabel'=>'&nbsp;',
+                        'lastPageLabel'=>'&nbsp;',
+                        'prevPageLabel' => '&nbsp;',
+                        'nextPageLabel' => '&nbsp;',
+                        'prevPageCssClass' => 'd-none',
+                        'nextPageCssClass' => 'd-none',
+                        'firstPageCssClass' => 'd-none',
+                        'lastPageCssClass' => 'd-none',
+                    ]);
+                    ?>
             </div>
 
         </div>

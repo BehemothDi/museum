@@ -92,3 +92,8 @@ a.desc:after {
 .news-item {
     background-color: #ABBAEA !important;
 }
+
+.d-none {
+    display: none;
+}
+
