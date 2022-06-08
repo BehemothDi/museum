@@ -2,7 +2,11 @@
 
 /** @var yii\web\View $this */
 
+use frontend\models\Sample;
+use yii\data\ActiveDataProvider;
 use yii\helpers\Html;
+use yii\helpers\Url;
+use yii\widgets\LinkPager;
 
 $this->title = 'Музейно-выставочный центр «Галерея безопасности Мурманской области»';
 $this->params['breadcrumbs'][] = $this->title;
@@ -17,160 +21,61 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </section>
 
+    <?php
+
+
+
+    $sample_list = Sample::find()->asArray()->all();
+
+    $provider2 = new ActiveDataProvider([
+        'query' => Sample::find(),
+        'pagination' => [
+            'pageSize' => 9,
+
+        ],
+    ]);
+
+    ?>
+
     <div class="album py-5 bg-light">
         <div class="container">
             <div class="row">
+                <?php foreach ($provider2->getModels() as $sample): ?>
                 <div class="col-md-4">
                     <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="http://pinegrow.com/placeholders/img14.jpg"/>
+                        <img class="card-img-top" src="<?php echo $sample['image_link']; ?>"/>
                         <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
+                                    <button type="button" class="btn btn-sm btn-outline-secondary">Редактировать</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="http://pinegrow.com/placeholders/img11.jpg"/>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="http://pinegrow.com/placeholders/img12.jpg"/>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="http://pinegrow.com/placeholders/img13.jpg"/>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="http://pinegrow.com/placeholders/img15.jpg"/>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="http://pinegrow.com/placeholders/img16.jpg"/>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="http://pinegrow.com/placeholders/img17.jpg"/>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="http://pinegrow.com/placeholders/img18.jpg"/>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top" src="http://pinegrow.com/placeholders/img20.jpg"/>
-                        <div class="card-body">
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <div class="d-flex justify-content-between align-items-center">
-                                <div class="btn-group">
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">View</button>
-                                    <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endforeach; ?>
             </div>
         </div>
 
         <div class="container text-left">
-            <ul class="d-flex flex-row justify-content-center pagination text-left">
-                <li class="page-item">
-                    <a class="page-link" href="#">Previous</a>
-                </li>
-
-                <li class="page-item">
-                    <a class="page-link" href="#">1</a>
-                </li>
-
-                <li class="page-item">
-                    <a class="page-link" href="#">2</a>
-                </li>
-
-                <li class="page-item">
-                    <a class="page-link" href="#">3</a>
-                </li>
-
-                <li class="page-item">
-                    <a class="page-link" href="#">Next</a>
-                </li>
-            </ul>
+            <?php
+            echo LinkPager::widget([
+                'pagination' => $provider2->pagination,
+                'options' => ['class' => 'd-flex flex-row justify-content-center pagination text-left'],
+                'maxButtonCount' => 8,
+                'linkOptions' => ['class' => 'page-link'],
+                'firstPageLabel'=>'&nbsp;',
+                'lastPageLabel'=>'&nbsp;',
+                'prevPageLabel' => '&nbsp;',
+                'nextPageLabel' => '&nbsp;',
+                'prevPageCssClass' => 'd-none',
+                'nextPageCssClass' => 'd-none',
+                'firstPageCssClass' => 'd-none',
+                'lastPageCssClass' => 'd-none',
+            ]);
+            ?>
         </div>
 
     </div>
