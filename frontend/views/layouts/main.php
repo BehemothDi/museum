@@ -33,7 +33,7 @@ AppAsset::register($this);
             //'brandLabel' => Yii::$app->name,
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
+                'class' => 'navbar navbar-expand-md center navbar-dark bg-dark fixed-top',
             ],
         ]);
         $menuItems = [
@@ -62,7 +62,7 @@ AppAsset::register($this);
         }
         echo Nav::widget([
             'encodeLabels' => false,
-            'options' => ['class' => 'navbar-nav ml-auto'],
+            'options' => ['class' => 'navbar-nav ml-auto', 'style' => 'align:center',],
             'items' => $menuItems,
 
         ]);
@@ -89,7 +89,7 @@ AppAsset::register($this);
         >
             <!-- Left -->
             <div class="me-5 d-none d-lg-block">
-                <span>Get connected with us on social networks:</span>
+                <span>Связаться через соцсети:</span>
             </div>
             <!-- Left -->
 
@@ -127,7 +127,7 @@ AppAsset::register($this);
                     <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
                         <!-- Content -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            <i class="fas fa-gem me-3"></i>Company name
+                            Музейно-выставочный центр «Галерея безопасности Мурманской области»
                         </h6>
                         <p>
                             Here you can use rows and columns to organize your footer content. Lorem ipsum
@@ -140,19 +140,19 @@ AppAsset::register($this);
                     <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Products
+                            Навигация
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Angular</a>
+                            <a href="#!" class="text-reset">Новости</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">React</a>
+                            <a href="#!" class="text-reset">Галлерея</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Vue</a>
+                            <a href="#!" class="text-reset">Запись</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Laravel</a>
+                            <a href="#!" class="text-reset">О нас</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -161,19 +161,19 @@ AppAsset::register($this);
                     <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Useful links
+                            Полезные ссылки
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Pricing</a>
+                            <a href="#!" class="text-reset">Управление МЧС МО</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Settings</a>
+                            <a href="#!" class="text-reset">МЧС России</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Orders</a>
+                            <a href="#!" class="text-reset">Гражданская оборона</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Help</a>
+                            <a href="#!" class="text-reset">Виртуальные туры</a>
                         </p>
                     </div>
                     <!-- Grid column -->
@@ -182,15 +182,15 @@ AppAsset::register($this);
                     <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
                         <!-- Links -->
                         <h6 class="text-uppercase fw-bold mb-4">
-                            Contact
+                            Контакты
                         </h6>
-                        <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
+                        <p><i class="fas fa-home me-3"></i> 183052 г. Мурманск, ул. Шевченко, 32</p>
                         <p>
                             <i class="fas fa-envelope me-3"></i>
-                            info@example.com
+                            museum-mchs51@yandex.ru
                         </p>
-                        <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-                        <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
+                        <p><i class="fas fa-phone me-3"></i> +7 921 281-02-41</p>
+                        <p><i class="fas fa-print me-3"></i> (815 2) 53-81-94</p>
                     </div>
                     <!-- Grid column -->
                 </div>
@@ -201,8 +201,8 @@ AppAsset::register($this);
 
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2021 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+            © 2022 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">МАГУ</a>
         </div>
         <!-- Copyright -->
     </footer>
