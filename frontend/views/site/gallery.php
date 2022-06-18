@@ -1,8 +1,9 @@
 <?php
 
-/** @var yii\web\View $this */
+/* @var yii\web\View $this */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 
 $this->title = 'Галлерея';
 $this->params['breadcrumbs'][] = $this->title;

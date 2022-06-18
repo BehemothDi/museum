@@ -92,3 +92,145 @@ a.desc:after {
 .news-item {
     background-color: #ABBAEA !important;
 }
+
+.head_1 {
+    height: 465px;
+    width: 100%;
+    background-image: url("../img/главная.png");
+    text-align: -webkit-center;
+    padding-top: 40px;
+
+}
+
+.img
+{
+width: 10px;
+height: 10px;
+}
+
+main > .container {
+    padding: 28px;
+}
+
+.navbar-expand-md .navbar-nav .nav-link {
+    padding-right: 3.5rem;
+    padding-left: 0.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 17px;
+}
+
+.pt-5, .py-5 {
+    padding-top: 1rem !important;
+}
+
+.row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-bottom: 65px;
+}
+
+.row_fut {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+a.button2, a.button2:before {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    border: solid rgb(19, 19, 19);
+    outline: none;
+    opacity: 1;
+    transition: .2s, opacity 0s 9999999s, visibility 0s 9999999s;
+  } 
+  a.button2 {
+    position: relative;
+    padding: calc(8px + 3px - 1px) calc(15px + 10px - 1px);
+    border: 2px solid rgba(63, 63, 63);
+    background-image: url("1.jpg");
+    background-size: 540px 320px;
+    height: 320px;
+    width: 540px;
+  }
+  a.button2:before {
+    position:  absolute; 
+    bottom: -7px;
+    left: -1px;
+    width: calc(100% - (15px + 10px - 1px)*2);
+    background: #fff linear-gradient(rgb(58,160,253), rgb(4,88,192) 60%, rgb(49,112,201));
+    box-shadow: 0 10px 18px rgba(0,0,0,.5);
+  }
+  a.button2:hover {
+    -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+  }
+  a.button2:hover:before {
+    border-color: #0766d8;
+    background: #fff linear-gradient(#3fadff, #0766d8 60%, #3279dd);
+  }
+  a.button2:focus,
+  a.button2:active {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  a.button3, a.button3:before {
+    display: inline-block;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    text-align: center;
+    border: solid rgb(19, 19, 19);
+    outline: none;
+    opacity: 1;
+    transition: .2s, opacity 0s 9999999s, visibility 0s 9999999s;
+  } 
+  a.button3 {
+    position: relative;
+    padding: calc(8px + 3px - 1px) calc(15px + 10px - 1px);
+    border: 2px solid rgba(63, 63, 63);
+    background-image: url("1.jpg");
+    background-size: 350px 225px;
+    height: 225px;
+    width: 350px;
+  }
+  a.button3:before {
+    position:  absolute; 
+    bottom: -7px;
+    left: -1px;
+    width: calc(100% - (15px + 10px - 1px)*2);
+    background: #fff linear-gradient(rgb(58,160,253), rgb(4,88,192) 60%, rgb(49,112,201));
+    box-shadow: 0 10px 18px rgba(0,0,0,.5);
+  }
+  a.button3:hover {
+    -webkit-transform: scale(1.05, 1.05);
+    transform: scale(1.05, 1.05);
+  }
+  a.button3:hover:before {
+    border-color: #0766d8;
+    background: #fff linear-gradient(#3fadff, #0766d8 60%, #3279dd);
+  }
+  a.button3:focus,
+  a.button3:active {
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+    opacity: 0;
+    visibility: hidden;
+  }
