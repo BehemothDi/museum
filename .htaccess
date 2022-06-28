@@ -10,6 +10,6 @@ RewriteRule ^backend(/(.*))?$ backend/web/$2 [S=1]
 RewriteRule .* frontend/web/$0
 
 # Uncomment the following, if you want speaking URL
-#RewriteCond %{REQUEST_FILENAME} !-f
-#RewriteCond %{REQUEST_FILENAME} !-d
-#RewriteRule ^([^/]+/web)/.*$ $1/index.php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^([^/]+/web)/.*$ $1/index.php
