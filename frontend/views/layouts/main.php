@@ -39,7 +39,7 @@ AppAsset::register($this);
         $menuItems = [
             ['label' => 'Главная', 'url' => ['/site/index']],
             ['label' => 'Новости', 'url' => ['/site/news']],
-            ['label' => 'Галлерея', 'url' => ['/site/gallery']],
+            ['label' => 'Галерея', 'url' => ['/site/gallery']],
             ['label' => 'Запись', 'url' => ['/site/record']],
             ['label' => 'О нас', 'url' => ['/site/about']],
             ['label' => 'Контакты', 'url' => ['/site/contact']],
