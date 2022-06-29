@@ -1,9 +1,24 @@
-Options +FollowSymLinks IndexIgnore */* RewriteEngine On
-# Installation directory
-RewriteBase /
-# Protect application and system files from being viewed
-RewriteRule ^(application|modules|system) - [F,L]
-# Allow any files or directories that exist to be displayed directly
-RewriteCond %{REQUEST_FILENAME} !-f RewriteCond %{REQUEST_FILENAME} !-d
-# Rewrite all other URLs to index.php/URL I used three variants of it.
-RewriteRule .* index.php/$0 [PT,L]
+Options -Indexes
+
+Options FollowSymlinks
+
+RewriteEngine on
+
+
+RewriteCond %{HTTP_HOST} ^www\.(.*)$
+
+RewriteRule ^(.*)$ http://%1/$1 [L,R=301]
+
+
+RewriteCond %{REQUEST_URI} ^/admin/$
+
+RewriteRule ^(admin)/$ /$1 [R=301,L]
+
+RewriteCond %{REQUEST_URI} ^/admin
+
+RewriteRule ^admin(/.+)?$ /backend/web/$1 [L,PT]
+
+
+RewriteCond %{REQUEST_URI} ^.*$
+
+RewriteRule ^(.*)$ /frontend/web/$1
