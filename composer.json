@@ -21,6 +21,7 @@
         "hail812/yii2-adminlte3": "~1.1",
         "yidas/yii2-fontawesome": "^5.0",
         "andrewdanilov/yii2-admin-panel": "~2.0.0",
+        "kl83/yii2-ymaps": "@dev"
 
     },
     "require-dev": {

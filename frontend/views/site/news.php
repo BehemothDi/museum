@@ -15,27 +15,20 @@ $this->title = 'Новости';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="container pl-5 pr-5 pt-2 pb-5 rounded" style="background-color: #e9ecef">
+        <h1><?= Html::encode($this->title) ?></h1>
+        <?php
+        $news_list = News::find()->asArray()->all();
+        $provider = new ActiveDataProvider([
+            'query' => News::find(),
+            'pagination' => [
+                'pageSize' => 7,
 
-    <?php
-
-
-
-    $news_list = News::find()->asArray()->all();
-
-    $provider = new ActiveDataProvider([
-        'query' => News::find(),
-        'pagination' => [
-            'pageSize' => 7,
-
-        ],
+            ],
 
 
-    ]);
-
-    ?>
-
-    <div class="album py-5 bg-light">
+        ]);
+        ?>
         <div class="container">
 
             <?php foreach ($provider->getModels() as $news): ?>
@@ -56,26 +49,23 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php endforeach; ?>
 
 
-
-
-
             <div class="container text-left">
-                    <?php
-                    echo LinkPager::widget([
-                        'pagination' => $provider->pagination,
-                        'options' => ['class' => 'd-flex flex-row justify-content-center pagination text-left'],
-                        'maxButtonCount' => 8,
-                        'linkOptions' => ['class' => 'page-link'],
-                        'firstPageLabel'=>'&nbsp;',
-                        'lastPageLabel'=>'&nbsp;',
-                        'prevPageLabel' => '&nbsp;',
-                        'nextPageLabel' => '&nbsp;',
-                        'prevPageCssClass' => 'd-none',
-                        'nextPageCssClass' => 'd-none',
-                        'firstPageCssClass' => 'd-none',
-                        'lastPageCssClass' => 'd-none',
-                    ]);
-                    ?>
+                <?php
+                echo LinkPager::widget([
+                    'pagination' => $provider->pagination,
+                    'options' => ['class' => 'd-flex flex-row justify-content-center pagination text-left'],
+                    'maxButtonCount' => 8,
+                    'linkOptions' => ['class' => 'page-link'],
+                    'firstPageLabel' => '&nbsp;',
+                    'lastPageLabel' => '&nbsp;',
+                    'prevPageLabel' => '&nbsp;',
+                    'nextPageLabel' => '&nbsp;',
+                    'prevPageCssClass' => 'd-none',
+                    'nextPageCssClass' => 'd-none',
+                    'firstPageCssClass' => 'd-none',
+                    'lastPageCssClass' => 'd-none',
+                ]);
+                ?>
             </div>
 
         </div>
