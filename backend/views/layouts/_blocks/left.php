@@ -11,7 +11,7 @@ use andrewdanilov\adminpanel\widgets\Menu;
 <div class="page-left">
 	<div class="sidebar-heading"><?= $siteName ?></div>
 	<?= Menu::widget(['items' => [
-		['label' => 'Главная', 'url' => ['/site/index'], 'icon' => 'desktop'],
+		['label' => 'Домой', 'url' => ['/site/index'], 'icon' => 'desktop'],
 		[],
 		['label' => 'Управление'],
 		['label' => 'Новости', 'url' => ['/news/index'], 'icon' => ['symbol' => 'newspaper', 'type' => 'regular']],
