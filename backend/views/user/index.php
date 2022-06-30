@@ -1,51 +1,44 @@
 <?php
 
-use yii\helpers\Html;
-use yii\helpers\Url;
-use yii\grid\ActionColumn;
+/* @var $this \yii\web\View */
+/* @var $searchModel UserSearch */
+/* @var $dataProvider \yii\data\ActiveDataProvider */
+
+$this->title = 'Пользователи';
+
 use yii\grid\GridView;
+use andrewdanilov\adminpanel\models\User;
+use andrewdanilov\adminpanel\models\UserSearch;
 
-/* @var $this yii\web\View */
-/* @var $searchModel app\models\UserSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = 'Users';
-$this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="user-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <p>
-        <?= Html::a('Create User', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
-
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
-
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'username',
-            'auth_key',
-            'password_hash',
-            'password_reset_token',
-            //'email:email',
-            //'status',
-            //'created_at',
-            //'updated_at',
-            //'verification_token',
-            [
-                'class' => ActionColumn::className(),
-                'urlCreator' => function ($action, User $model, $key, $index, $column) {
-                    return Url::toRoute([$action, 'id' => $model->id]);
-                 }
-            ],
-        ],
-    ]); ?>
-
-
+<div class="form-group">
+	<?= \yii\helpers\Html::a('Новый пользователь', ['update'], ['class' => 'btn btn-success']) ?>
 </div>
+
+<?= GridView::widget([
+	'filterModel' => $searchModel,
+	'dataProvider' => $dataProvider,
+	'columns' => [
+		[
+			'attribute' => 'id',
+			'headerOptions' => ['width' => 100],
+		],
+		'username',
+		'email',
+		[
+			'attribute' => 'status',
+			'value' => function(User $model) {
+				$statuses = User::getStatuses();
+				return $statuses[$model->status];
+			},
+			'filter' => User::getStatuses(),
+		],
+		'is_admin:boolean',
+
+		[
+			'class' => \andrewdanilov\gridtools\FontawesomeActionColumn::class,
+			'template' => '{update}{delete}',
+		]
+	]
+]) ?>

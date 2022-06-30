@@ -1,21 +1,29 @@
 <?php
 
-use yii\helpers\Html;
+/* @var $this \yii\web\View */
+/* @var $model User */
 
-/* @var $this yii\web\View */
-/* @var $model app\models\User */
+use andrewdanilov\adminpanel\models\User;
 
-$this->title = 'Update User: ' . $model->id;
-$this->params['breadcrumbs'][] = ['label' => 'Users', 'url' => ['index']];
-$this->params['breadcrumbs'][] = ['label' => $model->id, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+if ($model->isNewRecord) {
+	$this->title = 'Новый пользователь';
+} else {
+	$this->title = 'Редактирование пользователя ' . $model->username;
+}
 ?>
-<div class="user-update">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+<?php $form = \yii\widgets\ActiveForm::begin() ?>
 
-    <?= $this->render('_form', [
-        'model' => $model,
-    ]) ?>
+<?= $form->field($model, 'username')->textInput() ?>
 
-</div>
+<?= $form->field($model, 'email')->textInput(['type' => 'email']) ?>
+
+<?= $form->field($model, 'password')->textInput(['type' => 'password']) ?>
+
+<?= $form->field($model, 'status')->dropDownList(User::getStatuses()) ?>
+
+<?= $form->field($model, 'is_admin')->dropDownList(['Нет', 'Да']) ?>
+
+<?= \yii\helpers\Html::submitButton('Сохранить', ['class' => 'btn btn-success']) ?>
+
+<?php \yii\widgets\ActiveForm::end() ?>

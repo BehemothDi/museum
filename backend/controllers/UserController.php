@@ -7,29 +7,14 @@ use app\models\UserSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\helpers\Url;
+use andrewdanilov\adminpanel\controllers\BackendController;
 
 /**
  * UserController implements the CRUD actions for User model.
  */
-class UserController extends Controller
+class UserController extends BackendController
 {
-    /**
-     * @inheritDoc
-     */
-    public function behaviors()
-    {
-        return array_merge(
-            parent::behaviors(),
-            [
-                'verbs' => [
-                    'class' => VerbFilter::className(),
-                    'actions' => [
-                        'delete' => ['POST'],
-                    ],
-                ],
-            ]
-        );
-    }
 
     /**
      * Lists all User models.
@@ -38,6 +23,7 @@ class UserController extends Controller
      */
     public function actionIndex()
     {
+        $userManagerUrl = Url::to(['/user']);
         $searchModel = new UserSearch();
         $dataProvider = $searchModel->search($this->request->queryParams);
 
