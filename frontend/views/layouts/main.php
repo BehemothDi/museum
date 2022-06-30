@@ -30,10 +30,10 @@ AppAsset::register($this);
     <header>
         <?php
         NavBar::begin([
-            //'brandLabel' => Yii::$app->name,
+            'brandLabel' => 'Галерея МЧС',
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md center navbar-dark bg-dark fixed-top',
+                'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
             ],
         ]);
         $menuItems = [
@@ -85,16 +85,12 @@ AppAsset::register($this);
     <footer class="text-center text-lg-start bg-dark text-white">
         <!-- Section: Social media -->
         <section
-                class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom"
+                class="d-flex justify-content-center p-4 border-bottom"
         >
-            <!-- Left -->
-            <div class="me-5 d-none d-lg-block">
-                <span>Связаться через соцсети:</span>
-            </div>
-            <!-- Left -->
+
 
             <!-- Right -->
-            <div>
+            <div class="me-5 d-none d-lg-block">
                 <a href="" class="me-4 text-reset">
                     <i class="fab fa-facebook-f"></i>
                 </a>

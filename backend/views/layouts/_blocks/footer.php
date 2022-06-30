@@ -6,7 +6,7 @@
 ?>
 
 <div class="page-footer">
-	Copyright &copy; 2014-<?=date("Y")?>&nbsp;
+	Copyright &copy; 2014-<?=date("d-m-Y")?>&nbsp;
 	<a href="https://github.com/AndrewDanilov/" target="_blank">Andrew Danilov</a>.
 	All rights reserved.
 </div>

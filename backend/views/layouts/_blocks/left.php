@@ -11,13 +11,20 @@ use andrewdanilov\adminpanel\widgets\Menu;
 <div class="page-left">
 	<div class="sidebar-heading"><?= $siteName ?></div>
 	<?= Menu::widget(['items' => [
-		['label' => 'Главная', 'url' => ['/site/index'], 'icon' => 'desktop'],
+		['label' => 'Домой', 'url' => ['/site/index'], 'icon' => 'desktop'],
 		[],
 		['label' => 'Управление'],
 		['label' => 'Новости', 'url' => ['/news/index'], 'icon' => ['symbol' => 'newspaper', 'type' => 'regular']],
         ['label' => 'Экспонаты', 'url' => ['/sample/index'], 'icon' => ['symbol' => 'newspaper', 'type' => 'regular']],
+        ['label' => 'Записи', 'url' => ['/record/index'], 'icon' => ['symbol' => 'newspaper', 'type' => 'regular']],
 		[],
 		['label' => 'Система'],
 		['label' => 'Пользователи', 'url' => ['/user/index'], 'icon' => 'users'],
+        [],
+        ['label' => 'Разное'],
+        ['label' => 'Сайт', 'icon' => 'link', 'url' => '/index', ],
+        ['label' => 'PhpMyAdmin', 'icon' => 'file', 'url' => '/phpmyadmin', ],
+        ['label' => 'Gii', 'icon' => 'file-code', 'url' => ['/gii'], ],
+        ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
 	]]) ?>
 </div>
