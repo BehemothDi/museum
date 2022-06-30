@@ -24,6 +24,7 @@ class News extends \yii\db\ActiveRecord
         return 'news';
     }
 
+
     /**
      * {@inheritdoc}
      */
