@@ -12,6 +12,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
 
 <div class="site-about">
+
     <div class="pl-5 pr-5 pt-2 pb-5 bg-light">
     <h1><?= Html::encode($this->title) ?> на посещение</h1>
 

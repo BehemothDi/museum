@@ -9,8 +9,11 @@ use yii\widgets\ActiveForm;
 $this->title = 'Запись';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
+    <div class="pl-5 pr-5 pt-2 pb-5 bg-light">
+<div class="p-2 bg-success w-25 text-white">
+    Ваша заявка принята
+</div>
 
-<p>Ваша заявка принята</p>
 
 <ul>
 
@@ -25,4 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <li><label>Телефон</label>: <?= Html::encode($model->commentary) ?></li>
 </ul>
 
+
 <?= Html::a('На главную', ['/site/index'], ['class'=>'btn btn-primary']) ?>
+
+        </div>

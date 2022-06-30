@@ -22,8 +22,8 @@ use andrewdanilov\adminpanel\widgets\Menu;
 		['label' => 'Пользователи', 'url' => ['/user/index'], 'icon' => 'users'],
         [],
         ['label' => 'Разное'],
-        ['label' => 'Сайт', 'icon' => 'link', 'url' => '/index', ],
-        ['label' => 'PhpMyAdmin', 'icon' => 'file', 'url' => '/phpmyadmin', ],
+        ['label' => 'Сайт', 'icon' => 'link', 'url' => '/museum/index', ],
+        ['label' => 'PhpMyAdmin', 'icon' => 'file', 'url' => 'phpmyadmin', ],
         ['label' => 'Gii', 'icon' => 'file-code', 'url' => ['/gii'], ],
         ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
 	]]) ?>
