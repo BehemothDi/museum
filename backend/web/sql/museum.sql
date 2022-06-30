@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Июн 08 2022 г., 10:03
+-- Время создания: Июн 30 2022 г., 16:36
 -- Версия сервера: 10.4.24-MariaDB
--- Версия PHP: 8.0.8
+-- Версия PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -39,7 +39,8 @@ CREATE TABLE `migration` (
 INSERT INTO `migration` (`version`, `apply_time`) VALUES
 ('m000000_000000_base', 1654365825),
 ('m130524_201442_init', 1654365837),
-('m190124_110200_add_verification_token_column_to_user_table', 1654365837);
+('m190124_110200_add_verification_token_column_to_user_table', 1654365837),
+('m201026_111558_user_table_add_is_admin_field', 1656550234);
 
 -- --------------------------------------------------------
 
@@ -53,7 +54,7 @@ CREATE TABLE `news` (
   `image_link` varchar(255) NOT NULL,
   `short_desc` text NOT NULL,
   `text` text NOT NULL,
-  `datetime` datetime NOT NULL,
+  `datetime` datetime NOT NULL DEFAULT current_timestamp(),
   `author` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -96,6 +97,31 @@ CREATE TABLE `news_page` (
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `record`
+--
+
+CREATE TABLE `record` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `surname` varchar(255) NOT NULL,
+  `patronymic` varchar(255) NOT NULL,
+  `phone` int(10) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `date` datetime NOT NULL,
+  `amount_info` varchar(255) NOT NULL,
+  `commentary` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `record`
+--
+
+INSERT INTO `record` (`id`, `name`, `surname`, `patronymic`, `phone`, `email`, `date`, `amount_info`, `commentary`) VALUES
+(1, 'авыа', 'ыава', 'ваыа', 321321, 'авыаыва', '0000-00-00 00:00:00', 'уцй', 'уцуй');
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `sample`
 --
 
@@ -112,18 +138,18 @@ CREATE TABLE `sample` (
 
 INSERT INTO `sample` (`id`, `title`, `image_link`, `description`) VALUES
 (1, 'Образец 1', 'img/samples/1.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
-(2, 'Образец 2', 'img/samples/2.jpg', ''),
-(3, 'Образец 3', 'img/samples/3.jpg', ''),
-(4, 'Образец 4', 'img/samples/4.jpg', ''),
-(5, 'Образец 5', 'img/samples/5.jpg', ''),
-(6, 'Образец 6', 'img/samples/6.jpg', ''),
-(7, 'Образец 7', 'img/samples/7.jpg', ''),
-(8, 'Образец 8', 'img/samples/8.jpg', ''),
-(9, 'Образец 9', 'img/samples/9.jpg', ''),
-(10, 'Образец 10', 'img/samples/10.jpg', ''),
-(11, 'Образец 11', 'img/samples/11.jpg', ''),
-(12, 'Образец 12', 'img/samples/12.jpg', ''),
-(13, 'Образец 13', 'img/samples/13.jpg', '');
+(2, 'Образец 2', 'img/samples/2.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(3, 'Образец 3', 'img/samples/3.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(4, 'Образец 4', 'img/samples/4.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(5, 'Образец 5', 'img/samples/5.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(6, 'Образец 6', 'img/samples/6.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(7, 'Образец 7', 'img/samples/7.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(8, 'Образец 8', 'img/samples/8.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(9, 'Образец 9', 'img/samples/9.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(10, 'Образец 10', 'img/samples/10.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(11, 'Образец 11', 'img/samples/11.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(12, 'Образец 12', 'img/samples/12.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.'),
+(13, 'Образец 13', 'img/samples/13.jpg', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');
 
 -- --------------------------------------------------------
 
@@ -141,17 +167,17 @@ CREATE TABLE `user` (
   `status` smallint(6) NOT NULL DEFAULT 10,
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
-  `verification_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL
+  `verification_token` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `is_admin` tinyint(1) UNSIGNED NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 --
 -- Дамп данных таблицы `user`
 --
 
-INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`, `verification_token`) VALUES
-(1, 'admin', 'bAMcesfD-dwbGvm7rHRFmPBedXDpvGKK', '$2y$13$un8NoTQlahXrF7b2X1NTtOmJd0afl2vpdSG602oWfbz1U89wiFdOS', NULL, 'test@ru.ru', 10, 1654366057, 1654366057, 'oJq-T6sP9U-atNU6Hr_QZECQlvjWhWrr_1654366057'),
-(2, 'admin1', 'V0HjDtgftHbrADeiN1TTfT-BBmoZipy9', '$2y$13$8/Zch3t3w.OGo.Bv3KxoOeYew34W2qIunTtkJcYhatlSV7Y3j9d/m', NULL, 'test1@ru.ru', 9, 1654366167, 1654366167, '6wzFAgmOJifVG43VcWQEUu6WOgvKA8nA_1654366167'),
-(3, 'test2', 'rJRSsU2v0IKUqvKMJoBvkKlxlyvjbghn', '$2y$13$wuF4TNWKd5PwhbWd8oknxOEaP2DAJTv3s0SP6U5J36mpcxPWvO14W', NULL, 'test2@ru.ru', 10, 1654366411, 1654366411, 'WllI5Sq6WV885xay8SvTJXN9nz-si7Oo_1654366411');
+INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_reset_token`, `email`, `status`, `created_at`, `updated_at`, `verification_token`, `is_admin`) VALUES
+(4, 'admin', 'knUGeP-le8khFpCFH1k1TQxB_vCssYF-', '$2y$13$8sVD3G2W/VDjbwqCxdONeOtDCaVrygAwJWEtwDbRoKf3p19vnhhOy', NULL, 'admin@example.com', 10, 2022, 1656551031, NULL, 1),
+(5, 'test', 'gEPT5bA-_rdOEa0SA4H0Fo7eZVgv4zQV', '$2y$13$gXRfiG74X7rWl8nJDB0S7.RgsDXKclSIbPYVs8T3F1lqn3kA1Io/q', NULL, 'test@test.ru', 10, 1656551281, 1656551281, NULL, 0);
 
 --
 -- Индексы сохранённых таблиц
@@ -173,6 +199,12 @@ ALTER TABLE `news`
 -- Индексы таблицы `news_page`
 --
 ALTER TABLE `news_page`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `record`
+--
+ALTER TABLE `record`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -198,7 +230,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT для таблицы `news`
 --
 ALTER TABLE `news`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 
 --
 -- AUTO_INCREMENT для таблицы `news_page`
@@ -207,16 +239,22 @@ ALTER TABLE `news_page`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT для таблицы `record`
+--
+ALTER TABLE `record`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT для таблицы `sample`
 --
 ALTER TABLE `sample`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT для таблицы `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
