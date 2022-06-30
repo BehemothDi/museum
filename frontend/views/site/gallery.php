@@ -45,7 +45,7 @@ $this->params['breadcrumbs'][] = $this->title;
                     <div class="card mb-4 box-shadow">
                         <img class="card-img-top" src="<?php echo $sample['image_link']; ?>"/>
                         <div class="card-body">
-                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                            <p class="card-text"><?php echo $sample['description']; ?></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
