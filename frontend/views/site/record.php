@@ -1,5 +1,6 @@
 <?php
 
+use meysampg\gmap\GMapMarker;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
@@ -31,6 +32,10 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary']) ?>
         </div>
         <?php ActiveForm::end(); ?>
+
+    </div>
+    <div>
+
 
     </div>
     </div>

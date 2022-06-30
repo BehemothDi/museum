@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dfe823764bef2bfbf5709b17c3cc67cc",
+    "content-hash": "b709162b17c9352add38f84b58d5e192",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -711,6 +711,53 @@
                 "source": "https://github.com/hail812/yii2-adminlte3/tree/v1.1.8"
             },
             "time": "2022-04-16T06:46:23+00:00"
+        },
+        {
+            "name": "meysampg/yii2-gmapmarker",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/meysampg/yii2-gmapmarker.git",
+                "reference": "f79c73ad7e54744c92161a0ca09ea80f53230f8e"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/meysampg/yii2-gmapmarker/zipball/f79c73ad7e54744c92161a0ca09ea80f53230f8e",
+                "reference": "f79c73ad7e54744c92161a0ca09ea80f53230f8e",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "meysampg\\gmap\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Meysam P.G.",
+                    "email": "p.g.meysam@gmail.com"
+                }
+            ],
+            "description": "A simple google map marker widget for Yii2",
+            "keywords": [
+                "extension",
+                "google",
+                "google-map",
+                "yii2"
+            ],
+            "support": {
+                "issues": "https://github.com/meysampg/yii2-gmapmarker/issues",
+                "source": "https://github.com/meysampg/yii2-gmapmarker/tree/master"
+            },
+            "abandoned": true,
+            "time": "2016-07-17T09:51:34+00:00"
         },
         {
             "name": "npm-asset/bootstrap",
