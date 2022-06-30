@@ -4,6 +4,7 @@ namespace frontend\models;
 
 use Yii;
 use yii\base\Model;
+use frontend\models\Record;
 
 class RecordForm extends Model
 {

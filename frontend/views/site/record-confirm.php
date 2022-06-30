@@ -18,7 +18,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <ul>
 
     <li><label>Имя</label>: <?= Html::encode($model->name) ?></li>
-
     <li><label>Фамилия</label>: <?= Html::encode($model->surname) ?></li>
     <li><label>Отчество</label>: <?= Html::encode($model->patronymic) ?></li>
     <li><label>Почта</label>: <?= Html::encode($model->email) ?></li>
