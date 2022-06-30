@@ -48,14 +48,14 @@ class Record extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'surname' => 'Surname',
-            'patronymic' => 'Patronymic',
-            'phone' => 'Phone',
-            'email' => 'Email',
-            'date' => 'Date',
-            'amount_info' => 'Amount Info',
-            'commentary' => 'Commentary',
+            'name' => 'Имя',
+            'surname' => 'Фамилия',
+            'patronymic' => 'Отчество',
+            'phone' => 'Телефон',
+            'email' => 'Электронная почта',
+            'date' => 'Дата визита',
+            'amount_info' => 'Количество человек',
+            'commentary' => 'Дополнительная информация',
         ];
     }
 }

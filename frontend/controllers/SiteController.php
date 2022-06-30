@@ -111,18 +111,22 @@ class SiteController extends Controller
      */
     public function actionRecord()
     {
-        $model = new RecordForm();
+        $model = new \frontend\models\Record();
 
-        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
-            // valid data received in $model
+        if ($model->load(Yii::$app->request->post())) {
+            if ($model->validate()) {
 
-            // do something meaningful here about $model ...
+                $model->save();
 
-            return $this->render('record-confirm', ['model' => $model]);
-        } else {
-            // either the page is initially displayed or there is some validation error
-            return $this->render('record', ['model' => $model]);
+                // form inputs are valid, do something here
+                return $this->render('record-confirm', ['model' => $model]);
+            }
         }
+
+        return $this->render('record', [
+            'model' => $model,
+        ]);
+
     }
 
         /**

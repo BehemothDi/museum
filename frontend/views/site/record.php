@@ -1,39 +1,29 @@
 <?php
-use frontend\models\RecordForm;
+
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
-/** @var yii\bootstrap4\ActiveForm $form */
-/** @var RecordForm $model */
-
-$this->title = 'Запись';
-$this->params['breadcrumbs'][] = $this->title;
+/* @var $this yii\web\View */
+/* @var $model frontend\models\Record */
+/* @var $form ActiveForm */
 ?>
-
-
-<div class="site-about">
-
-    <div class="pl-5 pr-5 pt-2 pb-5 bg-light">
-    <h1><?= Html::encode($this->title) ?> на посещение</h1>
-
-     <?= Yii::$app->session->getFlash('success'); ?>
+<div class="record">
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
-    <?= $form->field($model, 'surname') ?>
-    <?= $form->field($model, 'patronymic') ?>
-    <?= $form->field($model, 'email') ?>
-    <?= $form->field($model, 'phone') ?>
-    <?= $form->field($model, 'date') ?>
-    <?= $form->field($model, 'amount_info') ?>
-    <?= $form->field($model, 'commentary')->textarea(['rows' => 6]) ?>
 
-
-    <div class="form-group">
-        <?= Html::submitButton('Отправить заявку', ['class' => 'btn btn-primary']) ?>
-    </div>
-
+        <?= $form->field($model, 'name') ?>
+        <?= $form->field($model, 'surname') ?>
+        <?= $form->field($model, 'patronymic') ?>
+        <?= $form->field($model, 'phone') ?>
+        <?= $form->field($model, 'email') ?>
+        <?= $form->field($model, 'date') ?>
+        <?= $form->field($model, 'amount_info') ?>
+        <?= $form->field($model, 'commentary') ?>
+    
+        <div class="form-group">
+            <?= Html::submitButton('Отправить', ['class' => 'btn btn-primary']) ?>
+        </div>
     <?php ActiveForm::end(); ?>
-    </div>
-</div>
+
+</div><!-- record -->
