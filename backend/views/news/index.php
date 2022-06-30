@@ -4,7 +4,7 @@
 /* @var $searchModel Sample */
 /* @var $dataProvider ActiveDataProvider */
 
-$this->title = 'Образцы';
+$this->title = 'Новости';
 
 use andrewdanilov\gridtools\FontawesomeActionColumn;
 use backend\models\Sample;

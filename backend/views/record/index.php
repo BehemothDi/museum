@@ -11,16 +11,13 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\RecordSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = 'Records';
-$this->params['breadcrumbs'][] = $this->title;
+
 ?>
-<div class="record-index">
 
-    <h1><?= Html::encode($this->title) ?></h1>
 
-    <p>
-        <?= Html::a('Create Record', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+<div class="form-group">
+    <?= \yii\helpers\Html::a('Новая запись', ['create'], ['class' => 'btn btn-success']) ?>
+</div>
 
     <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
 
@@ -48,4 +45,3 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 
 
-</div>

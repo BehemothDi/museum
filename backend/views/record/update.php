@@ -6,9 +6,9 @@ use yii\helpers\Html;
 /* @var $model backend\models\Record */
 
 $this->title = 'Update Record: ' . $model->name;
-$this->params['breadcrumbs'][] = ['label' => 'Records', 'url' => ['index']];
+$this->params['breadcrumbs'][] = ['label' => 'Записи', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->id]];
-$this->params['breadcrumbs'][] = 'Update';
+$this->params['breadcrumbs'][] = 'Обновить';
 ?>
 <div class="record-update">
 
