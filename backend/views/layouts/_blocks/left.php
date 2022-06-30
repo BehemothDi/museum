@@ -22,7 +22,7 @@ use andrewdanilov\adminpanel\widgets\Menu;
 		['label' => 'Пользователи', 'url' => ['/user/index'], 'icon' => 'users'],
         [],
         ['label' => 'Разное'],
-        ['label' => 'Сайт', 'icon' => 'link', 'url' => '/museum/index', ],
+        ['label' => 'Сайт', 'icon' => 'link', 'url' => '/museum', ],
         [],
         ['label' => 'Локально'],
         ['label' => 'PhpMyAdmin', 'icon' => 'file', 'url' => '/phpmyadmin', ],
