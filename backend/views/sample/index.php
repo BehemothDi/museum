@@ -29,11 +29,11 @@ use yii\web\View;
 		],
 		'image_link',
         'title',
-		'short_desc',
-        'datetime',
+		'description',
 		[
 			'class' => FontawesomeActionColumn::class,
-			'template' => '{update}{delete}',
+			'template' => '{view}{update}{delete}',
+            'headerOptions' => ['width' => 70],
 		]
 	]
 ]) ?>

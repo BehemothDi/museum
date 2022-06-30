@@ -33,7 +33,8 @@ use yii\web\View;
         'datetime',
         [
             'class' => FontawesomeActionColumn::class,
-            'template' => '{update}{delete}',
+            'template' => '{view}{update}{delete}',
+            'headerOptions' => ['width' => 70],
         ]
     ]
 ]) ?>

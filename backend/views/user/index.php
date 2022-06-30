@@ -6,6 +6,7 @@
 
 $this->title = 'Пользователи';
 
+use andrewdanilov\gridtools\FontawesomeActionColumn;
 use yii\grid\GridView;
 use andrewdanilov\adminpanel\models\User;
 use andrewdanilov\adminpanel\models\UserSearch;
@@ -37,8 +38,9 @@ use andrewdanilov\adminpanel\models\UserSearch;
 		'is_admin:boolean',
 
 		[
-			'class' => \andrewdanilov\gridtools\FontawesomeActionColumn::class,
+			'class' => FontawesomeActionColumn::class,
 			'template' => '{update}{delete}',
+            'headerOptions' => ['width' => 70],
 		]
 	]
 ]) ?>
