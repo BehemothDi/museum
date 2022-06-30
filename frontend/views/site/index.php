@@ -5,7 +5,7 @@
 $this->title = 'Главная';
 ?>
 <section class="background-cover bg-dark pb-5 position-relative pt-5 text-white" style="background-image: url('../../img/index/main.png');">
-<!--    <img src="img/index/main.png"/>-->
+
     <div class="container pb-5 pt-5">
 
         <div class="pb-5 pt-5 row">
@@ -13,7 +13,6 @@ $this->title = 'Главная';
             <div class="col-lg-7 pb-5 pt-5">
                  <h1 class="display-4 font-weight-bold mb-3">Галерея безопасности </h1>
                  <h1 class="display-4 font-weight-bold mb-3">Мурманской области </h1>
-<!--                <p class="lead mb-4">Our ability to feel, act and communicate is indistinguishable from magic.</p><a href="#" class="btn btn-light pb-2 pl-4 pr-4 pt-2">Shop Collection</a>-->
             </div>
         </div>
     </div>
@@ -91,7 +90,7 @@ $this->title = 'Главная';
             <div class="carousel-item">
                 <img class="d-block w-100" src="img/news/6.jpg" alt="Third slide"/>
                 <div class="carousel-caption d-none d-md-block">
-                    <h1 style="text-shadow: 3px 3px #000000;">Книжная мини-выставка ко Дню славянской <письменности></письменности></h1>
+                    <h1 style="text-shadow: 3px 3px #000000;">Книжная мини-выставка ко Дню славянской письменности</h1>
                 </div>
             </div>
         </div>     <a class="carousel-control-prev" href="#carousel1" role="button" data-slide="prev"> <span class="carousel-control-prev-icon" aria-hidden="true"></span> <span class="sr-only">Previous</span> </a> <a class="carousel-control-next" href="#carousel1" role="button" data-slide="next"> <span class="carousel-control-next-icon" aria-hidden="true"></span> <span class="sr-only">Next</span> </a>
