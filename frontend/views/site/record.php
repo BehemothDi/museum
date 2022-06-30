@@ -18,12 +18,12 @@ $this->params['breadcrumbs'][] = $this->title;
         <?php $form = ActiveForm::begin(); ?>
 
 
-        <?= $form->field($model, 'name')->textInput(['autofocus' => true])  ?>
-        <?= $form->field($model, 'surname') ?>
-        <?= $form->field($model, 'patronymic') ?>
-        <?= $form->field($model, 'phone') ?>
-        <?= $form->field($model, 'email') ?>
-        <?= $form->field($model, 'date') ?>
+        <?= $form->field($model, 'name')->textInput(['type' => 'text', 'maxlength' => 20, 'autofocus' => true,])  ?>
+        <?= $form->field($model, 'surname')->textInput(['type' => 'text', 'maxlength' => 20]) ?>
+        <?= $form->field($model, 'patronymic')->textInput(['type' => 'text', 'maxlength' => 20])?>
+        <?= $form->field($model, 'phone')->textInput(['type' => 'text', 'maxlength' => 12]) ?>
+        <?= $form->field($model, 'email')->textInput(['type' => 'text', 'maxlength' => 20])?>
+        <?= $form->field($model, 'date')->textInput(['type' => 'date']) ?>
         <?= $form->field($model, 'amount_info') ?>
         <?= $form->field($model, 'commentary')->textarea(['rows' => 6]) ?>
 

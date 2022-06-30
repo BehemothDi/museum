@@ -33,9 +33,10 @@ class Record extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'surname', 'patronymic', 'phone', 'email', 'date', 'amount_info', 'commentary'], 'required'],
+            [['name', 'surname', 'patronymic', 'phone', 'email', 'date', 'amount_info'], 'required'],
             [['phone'], 'integer'],
             [['date'], 'safe'],
+            [['email'], 'email'],
             [['commentary'], 'string'],
             [['name', 'surname', 'patronymic', 'email', 'amount_info'], 'string', 'max' => 255],
         ];

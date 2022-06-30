@@ -198,8 +198,9 @@ AppAsset::register($this);
 
         <!-- Copyright -->
         <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-            © 2022 Copyright:
-            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">МАГУ</a>
+            Копирайт &copy; <?=date("Y")?>
+            <a href="https://www.masu.edu.ru/" style="text-decoration: none; color: wheat" target="_blank">МАГУ</a>.
+            Все права защищены.
         </div>
         <!-- Copyright -->
     </footer>
