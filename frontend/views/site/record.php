@@ -17,6 +17,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
      <?= Yii::$app->session->getFlash('success'); ?>
 
+    <?php $form = ActiveForm::begin(); ?>
 
     <?= $form->field($model, 'name')->textInput(['autofocus' => true]) ?>
     <?= $form->field($model, 'surname') ?>

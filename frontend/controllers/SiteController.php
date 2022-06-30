@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use app\models\RecordForm;
+use frontend\models\RecordForm;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
