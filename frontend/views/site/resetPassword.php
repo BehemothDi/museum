@@ -11,6 +11,7 @@ $this->title = 'Reset password';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-reset-password">
+    <div class="pl-5 pr-5 pt-2 pb-5 bg-light">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>Please choose your new password:</p>
@@ -27,5 +28,6 @@ $this->params['breadcrumbs'][] = $this->title;
 
             <?php ActiveForm::end(); ?>
         </div>
+    </div>
     </div>
 </div>
