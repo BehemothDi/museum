@@ -11,7 +11,7 @@ use andrewdanilov\adminpanel\widgets\Menu;
 <div class="page-left">
 	<div class="sidebar-heading"><?= $siteName ?></div>
 	<?= Menu::widget(['items' => [
-		['label' => 'Домой', 'url' => ['/site/index'], 'icon' => 'desktop'],
+		['label' => 'Главная', 'url' => ['/site/index'], 'icon' => 'desktop'],
 		[],
 		['label' => 'Управление'],
 		['label' => 'Новости', 'url' => ['/news/index'], 'icon' => ['symbol' => 'newspaper', 'type' => 'regular']],
@@ -23,7 +23,9 @@ use andrewdanilov\adminpanel\widgets\Menu;
         [],
         ['label' => 'Разное'],
         ['label' => 'Сайт', 'icon' => 'link', 'url' => '/museum/index', ],
-        ['label' => 'PhpMyAdmin', 'icon' => 'file', 'url' => 'phpmyadmin', ],
+        [],
+        ['label' => 'Локально'],
+        ['label' => 'PhpMyAdmin', 'icon' => 'file', 'url' => '/phpmyadmin', ],
         ['label' => 'Gii', 'icon' => 'file-code', 'url' => ['/gii'], ],
         ['label' => 'Debug', 'icon' => 'bug', 'url' => ['/debug'], 'target' => '_blank'],
 	]]) ?>
