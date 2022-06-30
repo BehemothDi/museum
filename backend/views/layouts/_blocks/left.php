@@ -13,11 +13,11 @@ use andrewdanilov\adminpanel\widgets\Menu;
 	<?= Menu::widget(['items' => [
 		['label' => 'Главная', 'url' => ['/site/index'], 'icon' => 'desktop'],
 		[],
-		['label' => 'Blog'],
+		['label' => 'Управление'],
 		['label' => 'Новости', 'url' => ['/news/index'], 'icon' => ['symbol' => 'newspaper', 'type' => 'regular']],
-		['label' => 'Экспонаты', 'url' => ['/articles/index'], 'icon' => ['symbol' => 'newspaper', 'type' => 'solid']],
+        ['label' => 'Экспонаты', 'url' => ['/sample/index'], 'icon' => ['symbol' => 'newspaper', 'type' => 'regular']],
 		[],
-		['label' => 'System'],
+		['label' => 'Система'],
 		['label' => 'Пользователи', 'url' => ['/user/index'], 'icon' => 'users'],
 	]]) ?>
 </div>
