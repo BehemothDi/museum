@@ -1,10 +1,10 @@
 <?php
-use frontend\models\ContactForm;
+use frontend\models\RecordForm;
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
 
 /** @var yii\bootstrap4\ActiveForm $form */
-/** @var ContactForm $model */
+/** @var RecordForm $model */
 
 $this->title = 'Запись';
 $this->params['breadcrumbs'][] = $this->title;
