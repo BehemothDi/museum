@@ -2,7 +2,7 @@
 
 namespace frontend\controllers;
 
-use frontend\models\News;
+use app\models\RecordForm;
 use frontend\models\ResendVerificationEmailForm;
 use frontend\models\VerifyEmailForm;
 use Yii;
@@ -80,6 +80,8 @@ class SiteController extends Controller
     {
 
         return $this->render('index');
+
+
     }
 
     /**
@@ -109,10 +111,21 @@ class SiteController extends Controller
      */
     public function actionRecord()
     {
-        return $this->render('record');
+        $model = new RecordForm();
+
+        if ($model->load(Yii::$app->request->post()) && $model->validate()) {
+            // valid data received in $model
+
+            // do something meaningful here about $model ...
+
+            return $this->render('record-confirm', ['model' => $model]);
+        } else {
+            // either the page is initially displayed or there is some validation error
+            return $this->render('record', ['model' => $model]);
+        }
     }
 
-    /**
+        /**
      * Logs in a user.
      *
      * @return mixed
