@@ -27,6 +27,7 @@ use andrewdanilov\adminpanel\models\UserSearch;
 		],
 		'image_link',
 		'short_desc',
+        'datetime',
 		[
 			'class' => \andrewdanilov\gridtools\FontawesomeActionColumn::class,
 			'template' => '{update}{delete}',
