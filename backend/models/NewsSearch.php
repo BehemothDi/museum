@@ -1,13 +1,13 @@
 <?php
 
-namespace app\models;
+namespace backend\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\News;
+use backend\models\News;
 
 /**
- * NewsSearch represents the model behind the search form of `app\models\News`.
+ * NewsSearch represents the model behind the search form of `backend\models\News`.
  */
 class NewsSearch extends News
 {
@@ -18,7 +18,7 @@ class NewsSearch extends News
     {
         return [
             [['id'], 'integer'],
-            [['title', 'image_link', 'text', 'datetime', 'author'], 'safe'],
+            [['title', 'image_link', 'short_desc', 'text', 'datetime', 'author'], 'safe'],
         ];
     }
 
@@ -64,6 +64,7 @@ class NewsSearch extends News
 
         $query->andFilterWhere(['like', 'title', $this->title])
             ->andFilterWhere(['like', 'image_link', $this->image_link])
+            ->andFilterWhere(['like', 'short_desc', $this->short_desc])
             ->andFilterWhere(['like', 'text', $this->text])
             ->andFilterWhere(['like', 'author', $this->author]);
 

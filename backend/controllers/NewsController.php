@@ -2,8 +2,8 @@
 
 namespace backend\controllers;
 
-use app\models\News;
-use app\models\NewsSearch;
+use backend\models\News;
+use backend\models\NewsSearch;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

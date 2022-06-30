@@ -1,37 +1,39 @@
 <?php
 
-/* @var $this \yii\web\View */
-/* @var $searchModel \app\models\NewsSearch */
-/* @var $dataProvider \yii\data\ActiveDataProvider */
+/* @var $this View */
+/* @var $searchModel Sample */
+/* @var $dataProvider ActiveDataProvider */
 
-$this->title = 'Новости';
+$this->title = 'Образцы';
 
-use app\models\News;
+use andrewdanilov\gridtools\FontawesomeActionColumn;
+use backend\models\Sample;
+use yii\data\ActiveDataProvider;
 use yii\grid\GridView;
-use andrewdanilov\adminpanel\models\User;
-use andrewdanilov\adminpanel\models\UserSearch;
+use yii\helpers\Html;
+use yii\web\View;
 
 ?>
 
-<div class="form-group">
-	<?= \yii\helpers\Html::a('Новая запись', ['update'], ['class' => 'btn btn-success']) ?>
-</div>
+    <div class="form-group">
+        <?= Html::a('Новая запись', ['create'], ['class' => 'btn btn-success']) ?>
+    </div>
 
 <?= GridView::widget([
-	'filterModel' => $searchModel,
-	'dataProvider' => $dataProvider,
-	'columns' => [
-		[
-			'attribute' => 'id',
-			'headerOptions' => ['width' => 50],
-		],
-		'image_link',
+    'filterModel' => $searchModel,
+    'dataProvider' => $dataProvider,
+    'columns' => [
+        [
+            'attribute' => 'id',
+            'headerOptions' => ['width' => 50],
+        ],
+        'image_link',
         'title',
-		'short_desc',
+        'short_desc',
         'datetime',
-		[
-			'class' => \andrewdanilov\gridtools\FontawesomeActionColumn::class,
-			'template' => '{update}{delete}',
-		]
-	]
+        [
+            'class' => FontawesomeActionColumn::class,
+            'template' => '{update}{delete}',
+        ]
+    ]
 ]) ?>

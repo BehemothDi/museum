@@ -7,19 +7,16 @@
 $this->title = 'Образцы';
 
 use andrewdanilov\gridtools\FontawesomeActionColumn;
-use app\models\News;
 use backend\models\Sample;
 use yii\data\ActiveDataProvider;
 use yii\grid\GridView;
-use andrewdanilov\adminpanel\models\User;
-use andrewdanilov\adminpanel\models\UserSearch;
 use yii\helpers\Html;
 use yii\web\View;
 
 ?>
 
 <div class="form-group">
-	<?= Html::a('Новая запись', ['update'], ['class' => 'btn btn-success']) ?>
+	<?= Html::a('Новая запись', ['create'], ['class' => 'btn btn-success']) ?>
 </div>
 
 <?= GridView::widget([
