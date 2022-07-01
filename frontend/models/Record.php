@@ -57,6 +57,7 @@ class Record extends \yii\db\ActiveRecord
             'date' => 'Дата визита',
             'amount_info' => 'Количество человек',
             'commentary' => 'Дополнительная информация',
+
         ];
     }
 }

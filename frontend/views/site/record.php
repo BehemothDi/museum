@@ -16,7 +16,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="container pl-5 pr-5 pt-2 pb-5 rounded" style="background-color: #e9ecef">
         <h1>Записаться на экскурсию</h1>
     <div class="row">
-        <div class="col-sm">
+        <div class="col-sm m-3">
 
             <?php $form = ActiveForm::begin(); ?>
 
@@ -36,9 +36,31 @@ $this->params['breadcrumbs'][] = $this->title;
             <?php ActiveForm::end(); ?>
 
         </div>
-        <div class="col-sm">
+        <div class="col-sm m-3">
         <div class="">
-
+            <p style="font-weight: bold">Как к нам добраться?</p>
+            <ul style="list-style: none; padding-left: 0">
+                <li>
+                    На троллейбусе:
+                    <ul style="list-style: disc">
+                        <li>№6 до остановки «Улица Шевченко»,</li>
+                        <li>№4 до остановки «Улица Шевченко» (конечная).</li>
+                    </ul>
+                </li>
+                <li>
+                    На автобусе:
+                    <ul style="list-style: disc">
+                        <li>№5, 10, 27 до остановки «Улица Шевченко»,</li>
+                        <li>№18 до остановки «Улица Баумана».</li>
+                    </ul>
+                </li>
+                <li>
+                    Пригородные автобусы:
+                    <ul style="list-style: disc">
+                        <li>№108, 110 до остановки «Улица Шевченко».</li>
+                    </ul>
+                </li>
+            </ul>
         </div>
         <div class="p-1">
             <?= MapWidget::widget([
