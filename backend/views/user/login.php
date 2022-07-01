@@ -20,7 +20,7 @@ $fieldOptions = [
 <div class="login-box">
 
 	<div class="text-center">
-		<h1 class="h4">Admin Area</h1>
+		<h1 class="h4">Панель администрирования</h1>
 	</div>
 
 	<?php $form = ActiveForm::begin([
