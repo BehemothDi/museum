@@ -21,27 +21,27 @@ $this->title = 'Главная';
     <section>
         <div class="container">
             <div class="justify-content-center row">
-                <div class="col-lg-4 col-md-6 py-3">
-                    <div class="background-left-center bg-dark pb-5 pl-4 position-relative pr-4 pt-5 text-dark" style="background-image:url('https://images.unsplash.com/photo-1467043237213-65f2da53396f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDkyMnwwfDF8c2VhcmNofDMwNnx8d29tZW4lMjBjbG90aGVzfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1080');">
+                <div class="border m-1 col-lg col-md py-3 border-dark" style="background: #e9ecef">
+                    <div class="background-left-center pb-5 pl-4 position-relative pr-4 pt-5 text-dark">
                         <div class="pb-5 pt-5"></div>
-                        <div>
-                            <h2 class="h5 mb-3">Информация посетителям</h2><a href="#" class="small stretched-link text-secondary">Перейти</a>
+                        <div class="p-1 " style="background: whitesmoke">
+                            <h2 class="h5 mb-3">Информация посетителям</h2><a href="index.php?r=site%2Fabout" class="small stretched-link text-secondary" target="_blank">Перейти</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 py-3">
-                    <div class="background-left-center bg-dark pb-5 pl-4 position-relative pr-4 pt-5 text-dark" style="background-image:url('https://images.unsplash.com/photo-1467043237213-65f2da53396f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDkyMnwwfDF8c2VhcmNofDMwNnx8d29tZW4lMjBjbG90aGVzfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1080');">
+                <div class="border m-1 col-lg col-md py-3 border-dark" style="background: #e9ecef">
+                    <div class="background-left-center pb-5 pl-4 position-relative pr-4 pt-5 text-dark">
                         <div class="pb-5 pt-5"></div>
-                        <div>
-                            <h2 class="h5 mb-3">Виртуальный тур</h2><a href="#" class="small stretched-link text-secondary">Перейти</a>
+                        <div class="p-1" style="background: whitesmoke">
+                            <h2 class="h5 mb-3">Записаться на посещение</h2><a href="index.php?r=site%2Frecord" class="small stretched-link text-secondary" target="_blank">Перейти</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 py-3">
-                    <div class="background-left-center bg-dark pb-5 pl-4 position-relative pr-4 pt-5 text-dark" style="background-image:url('https://images.unsplash.com/photo-1467043237213-65f2da53396f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MXwyMDkyMnwwfDF8c2VhcmNofDMwNnx8d29tZW4lMjBjbG90aGVzfGVufDB8fHw&ixlib=rb-1.2.1&q=80&w=1080');">
+                <div class="border m-1 col-l col-md py-3 border-dark" style="background: #e9ecef">
+                    <div class="background-left-center pb-5 pl-4 position-relative pr-4 pt-5 text-dark">
                         <div class="pb-5 pt-5"></div>
-                        <div>
-                            <h2 class="h5 mb-3">Запись на приём</h2><a href="#" class="small stretched-link text-secondary">Перейти</a>
+                        <div class="p-1" style="background: whitesmoke">
+                            <h2 class="h5 mb-3">Виртуальный тур</h2><a href="https://www.mospano.ru/museums/2020/murmansk/" class="small stretched-link text-secondary" target="_blank">Перейти</a>
                         </div>
                     </div>
                 </div>
