@@ -12,6 +12,7 @@ $this->title = 'Музейно-выставочный центр «Галере�
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
+    <div class="container pl-5 pr-5 pt-2 pb-5 rounded" style="background-color: #e9ecef">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <section class="text-center">
@@ -37,7 +38,7 @@ $this->params['breadcrumbs'][] = $this->title;
 
     ?>
 
-    <div class="album py-5 bg-light">
+    <div class="album py-5 ">
         <div class="container">
             <div class="row">
                 <?php foreach ($provider2->getModels() as $sample): ?>
@@ -79,6 +80,6 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
 
     </div>
-
+    </div>
 
 </div>
