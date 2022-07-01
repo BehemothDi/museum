@@ -4,7 +4,7 @@
 
 $this->title = 'Главная';
 ?>
-<section class="background-image bg-dark pb-5 position-relative pt-5 text-white" style="background-image: url('/img/index/main.PNG')">
+<section class="background-cover bg-dark pb-5 position-relative pt-5 text-white" style="background-image: url('img/test1.jpg')">
 
     <div class="container pb-5 pt-5" >
 
@@ -116,9 +116,4 @@ $this->title = 'Главная';
         </div>
     </section>
 </main>
-
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/popper.js"></script>
-<script src="bootstrap/js/bootstrap.min.js"></script>
 
