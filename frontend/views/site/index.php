@@ -4,9 +4,9 @@
 
 $this->title = 'Главная';
 ?>
-<section class="background-cover bg-dark pb-5 position-relative pt-5 text-white" style="background-image: url('../../img/index/main.png');">
+<section class="background-image bg-dark pb-5 position-relative pt-5 text-white" style="background-image: url('/img/index/main.PNG')">
 
-    <div class="container pb-5 pt-5">
+    <div class="container pb-5 pt-5" >
 
         <div class="pb-5 pt-5 row">
 
