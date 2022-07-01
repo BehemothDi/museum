@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
 
 <div class="site-about">
-    <div class="pl-5 pr-5 pt-2 pb-5 bg-light">
+    <div class="container pl-5 pr-5 pt-2 pb-5 rounded" style="background-color: #e9ecef">
         <div class="record w-50">
             <p class="bg-success w-50 p-2">Ваша заявка принята</p>
 

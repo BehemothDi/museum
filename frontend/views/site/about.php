@@ -8,7 +8,7 @@ $this->title = 'О нас';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="site-about">
-    <div class="pl-5 pr-5 pt-2 pb-5 bg-light">
+    <div class="container pl-5 pr-5 pt-2 pb-5 rounded" style="background-color: #e9ecef">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>Галерея безопасности Мурманской области
