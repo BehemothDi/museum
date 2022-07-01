@@ -29,24 +29,31 @@ $this->params['breadcrumbs'][] = $this->title;
 
         ]);
         ?>
+
         <div class="container">
 
+
+
+
             <?php foreach ($provider->getModels() as $news): ?>
+
+
                 <div class="col-lg-12 col-md-6">
-                    <div class="card flex-md-row mb-4 box-shadow h-md-250">
-                        <img class="card-img-right flex-auto d-none d-md-block img-thumbnail img-responsive"
-                             src="<?php echo $news['image_link']; ?>" alt="Card image cap" height="150" width="400"/>
+                    <div class="card flex-md-row mb-2 box-shadow h-md-250" style="max-height: 250px; word-wrap: break-word">
+                        <img class="card-img-right flex-auto d-none d-md-block img-thumbnail img-responsive m-1"
+                             src="<?php echo $news['image_link']; ?>" alt="Card image cap" style="max-width: 300px"/>
                         <div class="card-body d-flex flex-column align-items-start"><strong
                                     class="d-inline-block mb-2 text-secondary"><?php echo $news['author']; ?></strong>
-                            <h3 class="mb-0"><a class="text-dark" href="#"><?php echo $news['title']; ?></a></h3>
+                            <h4 class="mb-0"><a class="text-dark" href="#"><?php echo $news['title']; ?></a></h4>
                             <div class="mb-1 text-muted"><?php echo $news['datetime']; ?></div>
-                            <p class="card-text mb-auto"><?php echo $news['short_desc']; ?></p><a
+                            <p class="card-text mb-auto overflow-hidden"><?php echo $news['short_desc']; ?></p><a
                                     href="<?= Url::toRoute(['site/news_detailed', 'id' => $news['id']]); ?>">Посмотреть
                                 подробнее</a>
                         </div>
                     </div>
                 </div>
             <?php endforeach; ?>
+
 
 
             <div class="container text-left">
@@ -69,7 +76,7 @@ $this->params['breadcrumbs'][] = $this->title;
             </div>
 
         </div>
+
+
     </div>
-
-
 </div>
