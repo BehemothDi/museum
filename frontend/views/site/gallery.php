@@ -49,6 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             <p class="card-text"><?php echo $sample['description']; ?></p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <div class="btn-group">
+
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Посмотреть</button>
                                     <button type="button" class="btn btn-sm btn-outline-secondary">Редактировать</button>
                                 </div>

@@ -126,10 +126,10 @@ AppAsset::register($this);
                         <h6 class="text-uppercase fw-bold mb-4">
                             Музейно-выставочный центр «Галерея безопасности Мурманской области»
                         </h6>
-                        <p>
-                            Here you can use rows and columns to organize your footer content. Lorem ipsum
-                            dolor sit amet, consectetur adipisicing elit.
-                        </p>
+<!--                        <p>-->
+<!--                            Here you can use rows and columns to organize your footer content. Lorem ipsum-->
+<!--                            dolor sit amet, consectetur adipisicing elit.-->
+<!--                        </p>-->
                     </div>
                     <!-- Grid column -->
 
