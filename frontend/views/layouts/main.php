@@ -85,7 +85,7 @@ AppAsset::register($this);
     <main role="main" class="flex-shrink-0">
         <div class="container pt-3">
             <?= Breadcrumbs::widget([
-                'homeLink'=> ['url'=>'/site/index','label'=>'Главная'],
+                'homeLink'=> ['url'=>'index.php?r=site%2Findex','label'=>'Главная'],
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
             ]) ?>
             <?= Alert::widget() ?>

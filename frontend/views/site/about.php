@@ -6,6 +6,7 @@ use yii\helpers\Html;
 
 $this->title = 'О нас';
 $this->params['breadcrumbs'][] = $this->title;
+
 ?>
 <div class="site-about">
     <div class="container pl-5 pr-5 pt-2 pb-5 rounded" style="background-color: #e9ecef">
