@@ -102,3 +102,11 @@ div#my-menu-collapse ul li {
     margin: 0 auto;
 }
 
+table.detail-view th {
+    width: 25%;
+}
+
+table.detail-view td {
+    width: 75%;
+}
+

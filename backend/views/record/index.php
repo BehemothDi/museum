@@ -25,10 +25,19 @@ use yii\grid\GridView;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            'status',
+            [
+                'headerOptions' => ['width' => 50],
+                'attribute' => 'id'
+            ],
+            [
+                'headerOptions' => ['width' => 250],
+                'attribute' => 'status',
+                'value' => function(Record $model) {
+                    $statuses = Record::getStatuses();
+                    return $statuses[$model->status];
+                },
+                'filter' => Record::getStatuses(),
+            ],
             'name',
             'surname',
             'patronymic',

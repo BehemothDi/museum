@@ -8,6 +8,7 @@ use Yii;
  * This is the model class for table "record".
  *
  * @property int $id
+ * @property int $status
  * @property string $name
  * @property string $surname
  * @property string $patronymic
@@ -19,6 +20,11 @@ use Yii;
  */
 class Record extends \yii\db\ActiveRecord
 {
+
+    const STATUS_PENDING = 0;
+    const STATUS_APPROVED = 1;
+    const STATUS_REJECTED = 2;
+
     /**
      * {@inheritdoc}
      */
@@ -49,16 +55,38 @@ class Record extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'id',
-            'status' => 'статус',
+            'status' => 'Статус',
             'name' => 'Имя',
             'surname' => 'Фамилия',
             'patronymic' => 'Отчество',
             'phone' => 'Телефон',
             'email' => 'E-mail',
-            'date' => 'Дата посещения',
-            'time' => 'Время посещения',
-            'amount_info' => 'Количество человек',
-            'commentary' => 'Дополнительная информация',
+            'date' => 'Дата',
+            'time' => 'Время',
+            'amount_info' => 'Количество',
+            'commentary' => 'Дополнительно',
         ];
     }
+
+    public static function getStatuses()
+    {
+        return [
+            static::STATUS_PENDING => 'Требует подтверждения',
+            static::STATUS_APPROVED => 'Запись подтверждена',
+            static::STATUS_REJECTED => 'Запись отклонена',
+        ];
+    }
+
+    public function attributeValues() {
+        return [
+            'status' => function(Record $model) {
+            $statuses = Record::getStatuses();
+            return $statuses[$model->status];}
+
+        ];
+    }
+
+
 }
+
+

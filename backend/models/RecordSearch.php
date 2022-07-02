@@ -59,7 +59,9 @@ class RecordSearch extends Record
 
         // grid filtering conditions
         $query->andFilterWhere([
+
             'id' => $this->id,
+            'status' => $this->status,
             'phone' => $this->phone,
             'date' => $this->date,
         ]);

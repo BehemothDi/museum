@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1
--- Время создания: Июн 30 2022 г., 16:36
+-- Время создания: Июл 03 2022 г., 01:44
 -- Версия сервера: 10.4.24-MariaDB
 -- Версия PHP: 8.1.6
 
@@ -102,22 +102,25 @@ CREATE TABLE `news_page` (
 
 CREATE TABLE `record` (
   `id` int(11) NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT 0,
   `name` varchar(255) NOT NULL,
   `surname` varchar(255) NOT NULL,
   `patronymic` varchar(255) NOT NULL,
   `phone` int(10) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `date` datetime NOT NULL,
+  `date` date DEFAULT NULL,
+  `time` time DEFAULT NULL,
   `amount_info` varchar(255) NOT NULL,
-  `commentary` text NOT NULL
+  `commentary` text DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Дамп данных таблицы `record`
 --
 
-INSERT INTO `record` (`id`, `name`, `surname`, `patronymic`, `phone`, `email`, `date`, `amount_info`, `commentary`) VALUES
-(1, 'авыа', 'ыава', 'ваыа', 321321, 'авыаыва', '0000-00-00 00:00:00', 'уцй', 'уцуй');
+INSERT INTO `record` (`id`, `status`, `name`, `surname`, `patronymic`, `phone`, `email`, `date`, `time`, `amount_info`, `commentary`) VALUES
+(21, 1, '12321', '3213', '3213', 21312, 'ewqe@wew.ru', '2022-07-08', '12:12:00', '23', ''),
+(23, 0, 'fsd', 'fsd', 'dsf', 321, 'fgdgd@fs.ru', '2022-07-09', '00:00:00', '23', '');
 
 -- --------------------------------------------------------
 
@@ -179,6 +182,27 @@ INSERT INTO `user` (`id`, `username`, `auth_key`, `password_hash`, `password_res
 (4, 'admin', 'knUGeP-le8khFpCFH1k1TQxB_vCssYF-', '$2y$13$8sVD3G2W/VDjbwqCxdONeOtDCaVrygAwJWEtwDbRoKf3p19vnhhOy', NULL, 'admin@example.com', 10, 2022, 1656551031, NULL, 1),
 (5, 'test', 'gEPT5bA-_rdOEa0SA4H0Fo7eZVgv4zQV', '$2y$13$gXRfiG74X7rWl8nJDB0S7.RgsDXKclSIbPYVs8T3F1lqn3kA1Io/q', NULL, 'test@test.ru', 10, 1656551281, 1656551281, NULL, 0);
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `vitit_time_list`
+--
+
+CREATE TABLE `vitit_time_list` (
+  `id` int(11) NOT NULL,
+  `option` time NOT NULL DEFAULT '10:00:00'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Дамп данных таблицы `vitit_time_list`
+--
+
+INSERT INTO `vitit_time_list` (`id`, `option`) VALUES
+(1, '10:00:00'),
+(2, '12:00:00'),
+(3, '14:00:00'),
+(4, '16:00:00');
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -223,6 +247,13 @@ ALTER TABLE `user`
   ADD UNIQUE KEY `password_reset_token` (`password_reset_token`);
 
 --
+-- Индексы таблицы `vitit_time_list`
+--
+ALTER TABLE `vitit_time_list`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `option` (`option`);
+
+--
 -- AUTO_INCREMENT для сохранённых таблиц
 --
 
@@ -242,7 +273,7 @@ ALTER TABLE `news_page`
 -- AUTO_INCREMENT для таблицы `record`
 --
 ALTER TABLE `record`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
 
 --
 -- AUTO_INCREMENT для таблицы `sample`
@@ -255,6 +286,12 @@ ALTER TABLE `sample`
 --
 ALTER TABLE `user`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT для таблицы `vitit_time_list`
+--
+ALTER TABLE `vitit_time_list`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

@@ -23,7 +23,7 @@ use andrewdanilov\adminpanel\models\UserSearch;
 	'columns' => [
 		[
 			'attribute' => 'id',
-			'headerOptions' => ['width' => 100],
+			'headerOptions' => ['width' => 70],
 		],
 		'username',
 		'email',

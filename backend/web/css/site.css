@@ -88,3 +88,12 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+table.detail-view th {
+    width: 25%;
+    color: #0a73bb;
+}
+
+table.detail-view td {
+    width: 75%;
+}

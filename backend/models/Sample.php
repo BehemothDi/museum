@@ -40,10 +40,10 @@ class Sample extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'title' => 'Title',
-            'image_link' => 'Image Link',
-            'description' => 'Description',
+            'id' => 'id',
+            'title' => 'Название',
+            'image_link' => 'Изображение',
+            'description' => 'Описание',
         ];
     }
 }
