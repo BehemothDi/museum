@@ -74,7 +74,7 @@ AppAsset::register($this);
         }
         echo Nav::widget([
             'encodeLabels' => false,
-            'options' => ['class' => 'navbar-nav ml-auto', 'style' => 'align:center',],
+            'options' => ['class' => 'navbar-nav ml-auto', 'style' => 'align:center color:red',],
             'items' => $menuItems,
 
         ]);

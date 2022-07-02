@@ -4,18 +4,14 @@
 
 $this->title = 'Главная';
 ?>
-<section class="background-cover bg-dark pb-5 position-relative pt-5 text-white" style="background-image: url('img/index/main.png')">
+<section class="background-cover bg-dark pb-5 position-relative pt-5 text-white"
+         style="background-image: url('img/index/main.jpg');
+         background-repeat: no-repeat; background-size: cover; background-position: center;
+         height: 500px; width: auto; border-radius: 5px">>
 
-    <div class="container pb-5 pt-5" >
-
-        <div class="pb-5 pt-5 row">
-
-            <div class="col-lg-7 pb-5 pt-5 text-wrap flex-sm-wrap flex-md-wrap">
-
-            </div>
-        </div>
-    </div>
 </section>
+
+
 <main class="pb-5 pt-5">
     <section>
         <div class="container">
