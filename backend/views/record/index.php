@@ -28,12 +28,14 @@ use yii\grid\GridView;
             ['class' => 'yii\grid\SerialColumn'],
 
             'id',
+            'status',
             'name',
             'surname',
             'patronymic',
             'phone',
             'email:email',
             'date',
+            'time',
             'amount_info',
             'commentary:ntext',
             [

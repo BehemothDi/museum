@@ -24,6 +24,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 <li><label>Электронная почта</label>: <?= Html::encode($model->email) ?></li>
                 <li><label>Телефон</label>: <?= Html::encode($model->phone) ?></li>
                 <li><label>Дата визита</label>: <?= Html::encode($model->date) ?></li>
+                <li><label>Время визита</label>: <?= Html::encode($model->time) ?></li>
                 <li><label>Количество человек</label>: <?= Html::encode($model->amount_info) ?></li>
                 <li><label>Дополнительная информация</label>: <?= Html::encode($model->commentary) ?></li>
             </ul>

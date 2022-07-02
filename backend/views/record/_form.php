@@ -12,6 +12,8 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
+    <?= $form->field($model, 'status')->textInput(['maxlength' => true]) ?>
+
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'surname')->textInput(['maxlength' => true]) ?>
@@ -23,6 +25,8 @@ use yii\widgets\ActiveForm;
     <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'date')->textInput() ?>
+
+    <?= $form->field($model, 'time')->textInput() ?>
 
     <?= $form->field($model, 'amount_info')->textInput(['maxlength' => true]) ?>
 

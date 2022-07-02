@@ -90,7 +90,7 @@ a.desc:after {
 }
 
 .news-item {
-    background-color: #ABBAEA !important;
+    background-color: rgba(130, 25, 25, 0.75) !important;
 }
 
 .d-none {
@@ -101,3 +101,4 @@ div#my-menu-collapse ul li {
     text-align: center;
     margin: 0 auto;
 }
+

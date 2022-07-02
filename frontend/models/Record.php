@@ -16,6 +16,7 @@ use Yii;
  * @property string $date
  * @property string $amount_info
  * @property string $commentary
+ * @property mixed|null $time
  */
 class Record extends \yii\db\ActiveRecord
 {
@@ -33,9 +34,10 @@ class Record extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'surname', 'patronymic', 'phone', 'email', 'date', 'amount_info'], 'required'],
+            [['name', 'surname', 'patronymic', 'phone', 'email', 'date', 'time', 'amount_info'], 'required'],
             [['phone'], 'integer'],
             [['date'], 'safe'],
+            [['time'], 'safe'],
             [['email'], 'email'],
             [['commentary'], 'string'],
             [['name', 'surname', 'patronymic', 'email', 'amount_info'], 'string', 'max' => 255],
@@ -48,16 +50,15 @@ class Record extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'name' => 'Имя',
+             'name' => 'Имя',
             'surname' => 'Фамилия',
             'patronymic' => 'Отчество',
             'phone' => 'Телефон',
             'email' => 'Электронная почта',
             'date' => 'Дата визита',
+            'time' => 'Время визита',
             'amount_info' => 'Количество человек',
             'commentary' => 'Дополнительная информация',
-
         ];
     }
 }

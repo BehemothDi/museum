@@ -27,6 +27,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <?= $form->field($model, 'phone')->textInput(['type' => 'text', 'maxlength' => 12]) ?>
             <?= $form->field($model, 'email')->textInput(['type' => 'text', 'maxlength' => 20])?>
             <?= $form->field($model, 'date')->textInput(['type' => 'date']) ?>
+            <?= $form->field($model, 'time')->textInput(['type' => 'time']) ?>
             <?= $form->field($model, 'amount_info') ?>
             <?= $form->field($model, 'commentary')->textarea(['rows' => 6]) ?>
 

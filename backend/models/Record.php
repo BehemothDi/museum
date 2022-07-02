@@ -33,8 +33,9 @@ class Record extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['name', 'surname', 'patronymic', 'phone', 'email', 'date', 'amount_info',], 'required'],
-            [['phone'], 'integer'],
+            [['name', 'surname', 'patronymic', 'phone', 'email', 'date', 'time', 'amount_info',], 'required'],
+            [['id', 'phone'], 'integer'],
+            [['status'], 'integer'],
             [['date'], 'safe'],
             [['commentary'], 'string'],
             [['name', 'surname', 'patronymic', 'email', 'amount_info'], 'string', 'max' => 255],
@@ -47,13 +48,15 @@ class Record extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'Id',
+            'id' => 'id',
+            'status' => 'статус',
             'name' => 'Имя',
             'surname' => 'Фамилия',
             'patronymic' => 'Отчество',
             'phone' => 'Телефон',
             'email' => 'E-mail',
             'date' => 'Дата посещения',
+            'time' => 'Время посещения',
             'amount_info' => 'Количество человек',
             'commentary' => 'Дополнительная информация',
         ];

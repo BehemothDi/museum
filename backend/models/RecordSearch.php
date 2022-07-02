@@ -18,7 +18,8 @@ class RecordSearch extends Record
     {
         return [
             [['id', 'phone'], 'integer'],
-            [['name', 'surname', 'patronymic', 'email', 'date', 'amount_info', 'commentary'], 'safe'],
+            [['status'], 'integer'],
+            [['name', 'surname', 'patronymic', 'email', 'date', 'time', 'amount_info', 'commentary'], 'safe'],
         ];
     }
 
