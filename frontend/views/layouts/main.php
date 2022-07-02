@@ -10,6 +10,8 @@ use yii\bootstrap4\Breadcrumbs;
 use yii\bootstrap4\Html;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
+use yii\widgets\ActiveForm;
+
 
 
 AppAsset::register($this);
@@ -28,12 +30,17 @@ AppAsset::register($this);
     <?php $this->beginBody() ?>
 
     <header>
+
+        <div class="bg-dark text-light font-weight-bold text-center py-4 text-break border-bottom border-white m-auto">
+            МУЗЕЙНО-ВЫСТАВОЧНЫЙ ЦЕНТР «ГАЛЕРЕЯ БЕЗОПАСНОСТИ МУРМАНСКОЙ ОБЛАСТИ»
+        </div>
+
         <?php
         NavBar::begin([
             'brandLabel' => 'Галерея МЧС',
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed-top',
+                'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed',
             ],
         ]);
         $menuItems = [
@@ -72,7 +79,7 @@ AppAsset::register($this);
     </header>
 
     <main role="main" class="flex-shrink-0">
-        <div class="container">
+        <div class="container pt-3">
             <?= Breadcrumbs::widget([
                 'homeLink'=> ['url'=>'/site/index','label'=>'Главная'],
                 'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],
