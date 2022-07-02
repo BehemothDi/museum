@@ -32,7 +32,7 @@ AppAsset::register($this);
     <header>
 
         <div class="font-weight-bold text-center py-4 border-bottom border- text-break m-auto"
-             style="background: #19529b; color: whitesmoke"
+             style="background: #015496; color: whitesmoke"
         >
             МУЗЕЙНО-ВЫСТАВОЧНЫЙ ЦЕНТР «ГАЛЕРЕЯ БЕЗОПАСНОСТИ МУРМАНСКОЙ ОБЛАСТИ»
         </div>
