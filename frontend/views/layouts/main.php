@@ -31,7 +31,9 @@ AppAsset::register($this);
 
     <header>
 
-        <div class="bg-dark text-light font-weight-bold text-center py-4 text-break border-bottom border-white m-auto">
+        <div class="font-weight-bold text-center py-4 border-bottom border- text-break m-auto"
+             style="background: #19529b; color: whitesmoke"
+        >
             МУЗЕЙНО-ВЫСТАВОЧНЫЙ ЦЕНТР «ГАЛЕРЕЯ БЕЗОПАСНОСТИ МУРМАНСКОЙ ОБЛАСТИ»
         </div>
 
@@ -40,7 +42,9 @@ AppAsset::register($this);
             'brandLabel' => 'Галерея МЧС',
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md navbar-dark bg-dark fixed',
+                'class' => 'navbar navbar-expand-md fixed navbar-dark',
+                'style' => 'background-color: #01437b',
+
             ],
         ]);
         $menuItems = [
@@ -90,7 +94,7 @@ AppAsset::register($this);
     </main>
 
 
-    <footer class="text-center text-lg-start bg-dark text-white">
+    <footer class="text-center text-lg-start text-white" style="background-color: #01437b">
         <!-- Section: Social media -->
         <section
                 class="d-flex justify-content-center p-4 border-bottom"
