@@ -151,16 +151,16 @@ AppAsset::register($this);
                             Навигация
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Новости</a>
+                            <a href="index.php?r=site%2Fnews" class="text-reset">Новости</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Галлерея</a>
+                            <a href="index.php?r=site%2Fgallery" class="text-reset">Галлерея</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Запись</a>
+                            <a href="index.php?r=site%2Frecord" class="text-reset">Запись</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">О нас</a>
+                            <a href="index.php?r=site%2Fabout" class="text-reset">О нас</a>
                         </p>
                     </div>
                     <!-- Grid column -->
