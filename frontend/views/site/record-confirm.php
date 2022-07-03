@@ -15,7 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="site-about">
     <div class="container pl-5 pr-5 pt-2 pb-5 rounded" style="background-color: #e9ecef">
         <div class="record w-50">
-            <p class="bg-success w-50 p-2">Ваша заявка принята</p>
+            <p class="bg-success w-50 p-2">Ваша заявка принята. После одобрения администратором, Вам придёт уведомление по почте.</p>
 
             <ul>
                 <li><label>Имя</label>: <?= Html::encode($model->name) ?></li>

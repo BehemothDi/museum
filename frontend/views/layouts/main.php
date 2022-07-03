@@ -59,9 +59,9 @@ AppAsset::register($this);
         if (Yii::$app->user->isGuest) {
             $menuItems[] = ['label' => 'Регистрация', 'url' => ['/site/signup']];
             $menuItems[] = ['label' => 'Войти', 'url' => ['/site/login'],];
-            $menuItems[] = ['label' => '|'];
-            $menuItems[] = ['label' => Html::tag('span', '', ['class' => 'fab fa-vk']) . '', 'url' => 'https://vk.com/public191153873', 'linkOptions' => array('target' => '_blank'),];
-            $menuItems[] = ['label' => Html::tag('span', '', ['class' => 'fab fa-youtube']). '', 'url' => 'https://www.youtube.com/watch?v=nyJC3_GWo7E', 'linkOptions' => array('target' => '_blank'),];
+          //  $menuItems[] = ['label' => '|'];
+          //  $menuItems[] = ['label' => Html::tag('span', '', ['class' => 'fab fa-vk']) . '', 'url' => 'https://vk.com/public191153873', 'linkOptions' => array('target' => '_blank'),];
+          //  $menuItems[] = ['label' => Html::tag('span', '', ['class' => 'fab fa-youtube']). '', 'url' => 'https://www.youtube.com/watch?v=nyJC3_GWo7E', 'linkOptions' => array('target' => '_blank'),];
         } else {
             $menuItems[] = '<li>'
                 . Html::beginForm(['/site/logout'], 'post', ['class' => 'form-inline'])

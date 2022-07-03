@@ -19,10 +19,15 @@ use yii\web\View;
         <?= Html::a('Новая запись', ['create'], ['class' => 'btn btn-success']) ?>
     </div>
 
-<?= GridView::widget([
+
+<?=
+
+    GridView::widget([
     'filterModel' => $searchModel,
     'dataProvider' => $dataProvider,
+
     'columns' => [
+
         ['class' => 'yii\grid\SerialColumn'],
         'image_link',
         'title',
