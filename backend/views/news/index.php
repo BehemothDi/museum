@@ -23,13 +23,10 @@ use yii\web\View;
     'filterModel' => $searchModel,
     'dataProvider' => $dataProvider,
     'columns' => [
-        [
-            'attribute' => 'id',
-            'headerOptions' => ['width' => 50],
-        ],
+        ['class' => 'yii\grid\SerialColumn'],
         'image_link',
         'title',
-        'short_desc',
+        'text',
         'datetime',
         [
             'class' => FontawesomeActionColumn::class,

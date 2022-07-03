@@ -44,12 +44,12 @@ class News extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
-            'id' => 'ID',
-            'title' => 'Title',
-            'image_link' => 'Image Link',
-            'text' => 'Text',
-            'datetime' => 'Datetime',
-            'author' => 'Author',
+            'title' => 'Заголовок',
+            'image_link' => 'Изображение',
+            'short_desc' => 'Краткое описание',
+            'text' => 'Текст',
+            'datetime' => 'Дата публикации',
+            'author' => 'Автор',
         ];
     }
 }

@@ -11,6 +11,7 @@ use yii\grid\GridView;
 /* @var $searchModel backend\models\RecordSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
+$this->title = 'Записи';
 
 ?>
 
@@ -25,10 +26,8 @@ use yii\grid\GridView;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            [
-                'headerOptions' => ['width' => 50],
-                'attribute' => 'id'
-            ],
+            ['class' => 'yii\grid\SerialColumn'],
+
             [
                 'headerOptions' => ['width' => 250],
                 'attribute' => 'status',
