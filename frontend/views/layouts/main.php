@@ -42,7 +42,7 @@ AppAsset::register($this);
             'brandLabel' => 'Галерея МЧС',
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md fixed navbar-dark',
+                'class' => 'navbar navbar-expand-md navbar-dark',
                 'style' => 'background-color: #01437b',
 
             ],
