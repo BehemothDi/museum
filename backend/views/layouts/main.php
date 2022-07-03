@@ -11,12 +11,12 @@ AdminPanelAsset::register($this);
 if (isset(Yii::$app->params['siteName'])) {
 	$siteName = Yii::$app->params['siteName'];
 } else {
-	$siteName = 'AdminPanel';
+	$siteName = 'Панель администратора';
 }
 if (isset(Yii::$app->user->identity['username'])) {
 	$userName = Yii::$app->user->identity['username'];
 } else {
-	$userName = 'Guest';
+	$userName = 'Гость';
 }
 $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/andrewdanilov/yii2-admin-panel/src');
 ?>

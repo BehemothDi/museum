@@ -20,5 +20,9 @@ $this->params['breadcrumbs'][] = $this->title;
     <p>E-mail: museum-mchs51@yandex.ru</p>
     <p>График работы: пн-пт с 9 до 17</p>
 
+        <?php
+        $this->render('record_blocks/left_block')
+        ?>
+
     </div>
 </div>
