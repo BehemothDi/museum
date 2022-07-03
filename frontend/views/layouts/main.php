@@ -172,16 +172,16 @@ AppAsset::register($this);
                             Полезные ссылки
                         </h6>
                         <p>
-                            <a href="#!" class="text-reset">Управление МЧС МО</a>
+                            <a href="https://51.mchs.gov.ru/" class="text-reset">Управление МЧС МО</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">МЧС России</a>
+                            <a href="https://www.mchs.gov.ru/ministerstvo" class="text-reset">МЧС России</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Гражданская оборона</a>
+                            <a href="https://murman01.ru/" class="text-reset">Гражданская оборона</a>
                         </p>
                         <p>
-                            <a href="#!" class="text-reset">Виртуальные туры</a>
+                            <a href="https://xn--b1ae4ad.xn--p1ai/virtual" class="text-reset">Виртуальные туры</a>
                         </p>
                     </div>
                     <!-- Grid column -->
