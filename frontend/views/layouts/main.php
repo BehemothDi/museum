@@ -31,8 +31,8 @@ AppAsset::register($this);
 
     <header>
 
-        <div class="font-weight-bold text-center py-4 border-bottom border- text-break m-auto"
-             style="background: #015496; color: whitesmoke"
+        <div class="header"
+
         >
             МУЗЕЙНО-ВЫСТАВОЧНЫЙ ЦЕНТР «ГАЛЕРЕЯ БЕЗОПАСНОСТИ МУРМАНСКОЙ ОБЛАСТИ»
         </div>
@@ -42,7 +42,7 @@ AppAsset::register($this);
             'brandLabel' => 'Галерея МЧС',
             'brandUrl' => Yii::$app->homeUrl,
             'options' => [
-                'class' => 'navbar navbar-expand-md navbar-dark',
+                'class' => ' navbar-expand-md navbar-dark ',
                 'style' => 'background-color: #01437b',
 
             ],
@@ -74,7 +74,7 @@ AppAsset::register($this);
         }
         echo Nav::widget([
             'encodeLabels' => false,
-            'options' => ['class' => 'navbar-nav ml-auto', 'style' => 'align:center color:red',],
+            'options' => ['class' => 'navbar-nav ml-auto', 'style' => 'align:center'],
             'items' => $menuItems,
 
         ]);
