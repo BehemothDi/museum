@@ -5,6 +5,7 @@ use andrewdanilov\adminpanel\assets\AdminPanelAsset;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
+$this->registerCssFile("css/my.css");
 
 AdminPanelAsset::register($this);
 
