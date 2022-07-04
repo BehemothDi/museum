@@ -1,0 +1,31 @@
+.record-card {
+    width: 25%;
+    background: rgba(255, 136, 0, 0.8);
+    color: #000000;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 5px;
+}
+
+.record-card-line {
+    font-weight: bold;
+    margin: auto;
+    width: 90%;
+    padding: 10px;
+    border-bottom: 2px whitesmoke dashed;
+    overflow-wrap: break-word;
+}
+
+.record-button {
+    border-radius: 5px;
+    background: rgba(0, 0, 0, 0.15);
+    padding-top: 7px;
+    padding-bottom: 7px;
+    text-align: center;
+}
+
+.record-button:hover {
+    background: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    color: #000000 !important;
+}
